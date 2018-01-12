@@ -48,11 +48,10 @@ class FetchData : NSObject, NetworkSupervisor{
 //            notificationStr = notify
 //            network.getData(from: url, supervisor: self)
         }
-        
-        
+    
     fileprivate func createBaseUrl() -> String
     {
-        let urlString = "192.168.185.50:8080/Gartenplaner/planner"
+        let urlString = "192.168.185.50:8080/Gartenplaner"
         return urlString
             
     }

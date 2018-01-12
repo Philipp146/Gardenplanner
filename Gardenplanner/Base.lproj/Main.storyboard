@@ -180,7 +180,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kxx-VL-mFx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beds" translatesAutoresizingMaskIntoConstraints="NO" id="kxx-VL-mFx">
                                                     <rect key="frame" x="8" y="0.0" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="kxx-VL-mFx" secondAttribute="height" multiplier="1:1" id="TnM-U5-jpO"/>
@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="696.79999999999995" y="-579.76011994002999"/>
         </scene>
-        <!--Plants View Controller-->
+        <!--Crops View Controller-->
         <scene sceneID="9ZG-uH-WZJ">
             <objects>
-                <viewController id="cqd-gQ-RD8" customClass="PlantsViewController" customModule="Gardenplanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cqd-gQ-RD8" customClass="CropsViewController" customModule="Gardenplanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ein-VK-LCj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,14 +275,14 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantsCell" id="XGW-87-hKu" customClass="PlantsTableViewCell" customModule="Gardenplanner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CropsCell" id="XGW-87-hKu" customClass="CropsTableViewCell" customModule="Gardenplanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XGW-87-hKu" id="lzk-Na-uAg">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9NF-ql-VSn">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9NF-ql-VSn" userLabel="Crops Image">
                                                     <rect key="frame" x="8" y="0.0" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="9NF-ql-VSn" secondAttribute="height" multiplier="1:1" id="WVG-mK-h8l"/>
@@ -305,8 +305,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cropsImage" destination="9NF-ql-VSn" id="HSJ-I6-ANs"/>
                                             <outlet property="name" destination="8rX-XP-TXV" id="eWv-38-UDW"/>
-                                            <outlet property="plantsImage" destination="9NF-ql-VSn" id="HSJ-I6-ANs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

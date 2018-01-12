@@ -10,11 +10,30 @@ import UIKit
 
 class RecipesModel: NSObject {
     
-    fileprivate var model = RecipesModelSingleton.sharedInstance
+    fileprivate var model = ModelSingleton.sharedInstance
+    
+    func numberOfEntries() -> Int{
+        return model.recipes.count
+    }
+    
+    func add(recipe : RecipesStruct){
+        model.recipes.append(recipe)
+    }
+    
+    func set(recipes : [RecipesStruct]){
+        model.recipes = recipes
+    }
+    
+    func getElement(at position : Int) -> RecipesStruct{
+        return model.recipes[position]
+    }
+    
+    func remove(at position : Int){
+        model.recipes.remove(at: position)
+    }
+    
+    func clear(){
+        model.recipes = []
+    }
 
-}
-
-fileprivate class RecipesModelSingleton {
-    fileprivate var data : [RecipesStruct] = []
-    static let sharedInstance = RecipesModelSingleton()
 }

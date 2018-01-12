@@ -8,6 +8,10 @@
 
 import UIKit
 
-class BedsStruct: NSObject {
+struct BedsStruct{
 
+    var id : Int
+    var owner : String
+    var name : String
+    var locationId : Int
 }

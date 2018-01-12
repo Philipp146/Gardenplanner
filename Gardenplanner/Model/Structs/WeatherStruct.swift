@@ -8,6 +8,12 @@
 
 import UIKit
 
-class WeatherStruct: NSObject {
-
+struct WeatherStruct{
+    
+    var id : Int
+    var date : Date
+    var rainfall : Int
+    var sunHours : Int
+    var temperature : Double
+    var locationId : Int
 }

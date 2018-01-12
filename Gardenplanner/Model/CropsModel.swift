@@ -1,8 +1,8 @@
 //
-//  PlantsModel.swift
+//  CropsModel.swift
 //  Gardenplanner
 //
-//  Created by Philipp on 11.01.18.
+//  Created by Philipp on 12.01.18.
 //  Copyright © 2018 Philipp. All rights reserved.
 //
 
@@ -13,27 +13,27 @@ class CropsModel: NSObject {
     fileprivate var model = ModelSingleton.sharedInstance
     
     func numberOfEntries() -> Int{
-        return model.plants.count
+        return model.crops.count
     }
     
-    func add(_ plant : CropsStruct){
-        model.plants.append(plant)
+    func add(crop : CropsStruct){
+        model.crops.append(crop)
     }
     
-    func set(_ plants : [CropsStruct]){
-        model.plants = plants
+    func set(crops : [CropsStruct]){
+        model.crops = crops
     }
     
     func getElement(at position : Int) -> CropsStruct{
-        return model.plants[position]
+        return model.crops[position]
     }
     
     func remove(at position : Int){
-        model.plants.remove(at: position)
+        model.crops.remove(at: position)
     }
     
     func clear(){
-        model.plants = []
+        model.crops = []
     }
 
 }

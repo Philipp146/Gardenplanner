@@ -8,17 +8,17 @@
 
 import UIKit
 
-class PlantsViewController: UIViewController {
+class CropsViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var dataSource : PlantsTableViewDataSource!
+    var dataSource : CropsTableViewDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource = PlantsTableViewDataSource()
+        dataSource = CropsTableViewDataSource()
         tableView.dataSource = dataSource
 
         // Do any additional setup after loading the view.

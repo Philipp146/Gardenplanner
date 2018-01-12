@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PlantsTableViewCell: UITableViewCell {
+class CropsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var plantsImage: UIImageView!
+    @IBOutlet weak var cropsImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     
     override func awakeFromNib() {

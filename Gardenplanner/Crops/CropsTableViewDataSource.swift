@@ -8,12 +8,12 @@
 
 import UIKit
 
-class PlantsTableViewDataSource: NSObject, UITableViewDataSource {
+class CropsTableViewDataSource: NSObject, UITableViewDataSource {
     
-    var data : PlantsModel
+    var data : CropsModel
     
     override init() {
-        data = PlantsModel()
+        data = CropsModel()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,8 +21,9 @@ class PlantsTableViewDataSource: NSObject, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
-        //let entry =
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlantsCell")
+        let entry = data.getElement(at: index)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CropsCell") as! CropsTableViewCell
+        return cell
     }
     
 

@@ -8,6 +8,6 @@
 
 import UIKit
 
-class RecipesStruct: NSObject {
+struct RecipesStruct {
 
 }

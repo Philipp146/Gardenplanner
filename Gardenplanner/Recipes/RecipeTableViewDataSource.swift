@@ -22,8 +22,9 @@ class RecipeTableViewDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
-        //var entry =
+        var entry = data.getElement(at: index)
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipesCell") as! RecipesTableViewCell
+        return cell
     }
     
 

@@ -10,11 +10,30 @@ import UIKit
 
 class WeatherModel: NSObject {
     
-    fileprivate var model = WeatherModelSingleton.sharedInstance
+    fileprivate var model = ModelSingleton.sharedInstance
+    
+    func numberOfEntries() -> Int{
+        return model.weathers.count
+    }
+    
+    func add(weather : WeatherStruct){
+        model.weathers.append(weather)
+    }
+    
+    func set(weathers : [WeatherStruct]){
+        model.weathers = weathers
+    }
+    
+    func getElement(at position : Int) -> WeatherStruct{
+        return model.weathers[position]
+    }
+    
+    func remove(at position : Int){
+        model.weathers.remove(at: position)
+    }
+    
+    func clear(){
+        model.weathers = []
+    }
 
-}
-
-fileprivate class WeatherModelSingleton{
-    fileprivate var data : [WeatherStruct] = []
-    static let sharedInstance = WeatherModelSingleton()
 }
