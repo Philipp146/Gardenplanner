@@ -18,7 +18,7 @@
 		1728D0D52007A1720066ABBF /* CropsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0D42007A1720066ABBF /* CropsTableViewCell.swift */; };
 		1728D0D72007A17D0066ABBF /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0D62007A17D0066ABBF /* RecipesTableViewCell.swift */; };
 		1728D0DA2007A4150066ABBF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0D92007A4150066ABBF /* Network.swift */; };
-		1728D0DD2007A4CC0066ABBF /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0DC2007A4CC0066ABBF /* FetchData.swift */; };
+		1728D0DD2007A4CC0066ABBF /* FetchDataBeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0DC2007A4CC0066ABBF /* FetchDataBeds.swift */; };
 		1728D0E02007A5140066ABBF /* NetworkSupervisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0DF2007A5140066ABBF /* NetworkSupervisor.swift */; };
 		1728D0E32007B06B0066ABBF /* BedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0E22007B06B0066ABBF /* BedsModel.swift */; };
 		1728D0E72007B0830066ABBF /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0E62007B0830066ABBF /* WeatherModel.swift */; };
@@ -39,6 +39,12 @@
 		17A62ADD200774B10059977D /* GardenplannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A62ADC200774B10059977D /* GardenplannerTests.swift */; };
 		17A62AE8200774B10059977D /* GardenplannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A62AE7200774B10059977D /* GardenplannerUITests.swift */; };
 		17A62AF6200781A90059977D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A62AF5200781A90059977D /* Assets.xcassets */; };
+		17C5E23D200A871F00CAA441 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E23C200A871F00CAA441 /* CropViewController.swift */; };
+		17C5E23F200A932D00CAA441 /* AddBedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E23E200A932D00CAA441 /* AddBedViewController.swift */; };
+		17C5E241200A981C00CAA441 /* FetchDataCrops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E240200A981C00CAA441 /* FetchDataCrops.swift */; };
+		17C5E243200B85C900CAA441 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E242200B85C900CAA441 /* UrlBuilder.swift */; };
+		17C5E247200BA6A500CAA441 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E246200BA6A500CAA441 /* Constants.swift */; };
+		17C5E249200BC2C400CAA441 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E248200BC2C400CAA441 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +76,7 @@
 		1728D0D42007A1720066ABBF /* CropsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsTableViewCell.swift; sourceTree = "<group>"; };
 		1728D0D62007A17D0066ABBF /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		1728D0D92007A4150066ABBF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		1728D0DC2007A4CC0066ABBF /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
+		1728D0DC2007A4CC0066ABBF /* FetchDataBeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDataBeds.swift; sourceTree = "<group>"; };
 		1728D0DF2007A5140066ABBF /* NetworkSupervisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupervisor.swift; sourceTree = "<group>"; };
 		1728D0E22007B06B0066ABBF /* BedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedsModel.swift; sourceTree = "<group>"; };
 		1728D0E62007B0830066ABBF /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
@@ -97,6 +103,12 @@
 		17A62AE7200774B10059977D /* GardenplannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenplannerUITests.swift; sourceTree = "<group>"; };
 		17A62AE9200774B10059977D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A62AF5200781A90059977D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17C5E23C200A871F00CAA441 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		17C5E23E200A932D00CAA441 /* AddBedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBedViewController.swift; sourceTree = "<group>"; };
+		17C5E240200A981C00CAA441 /* FetchDataCrops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDataCrops.swift; sourceTree = "<group>"; };
+		17C5E242200B85C900CAA441 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
+		17C5E246200BA6A500CAA441 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		17C5E248200BC2C400CAA441 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +136,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1728D0B920079BA90066ABBF /* Controller */ = {
+		1728D0B920079BA90066ABBF /* Crop */ = {
 			isa = PBXGroup;
 			children = (
+				17C5E23C200A871F00CAA441 /* CropViewController.swift */,
 			);
-			path = Controller;
+			path = Crop;
 			sourceTree = "<group>";
 		};
 		1728D0BA20079BB60066ABBF /* Beds */ = {
@@ -137,6 +150,7 @@
 				1728D0BE20079C640066ABBF /* BedsViewController.swift */,
 				1728D0CC2007A0A40066ABBF /* BedsTableViewDataSource.swift */,
 				1728D0D22007A1660066ABBF /* BedsTableViewCell.swift */,
+				17C5E23E200A932D00CAA441 /* AddBedViewController.swift */,
 			);
 			path = Beds;
 			sourceTree = "<group>";
@@ -174,7 +188,9 @@
 			children = (
 				1728D0DE2007A5060066ABBF /* Protocol */,
 				1728D0D92007A4150066ABBF /* Network.swift */,
-				1728D0DC2007A4CC0066ABBF /* FetchData.swift */,
+				1728D0DC2007A4CC0066ABBF /* FetchDataBeds.swift */,
+				17C5E240200A981C00CAA441 /* FetchDataCrops.swift */,
+				17C5E242200B85C900CAA441 /* UrlBuilder.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -197,6 +213,8 @@
 				1728D0F82008CB4B0066ABBF /* LocationsModel.swift */,
 				1728D0FC2008D5AD0066ABBF /* CropsModel.swift */,
 				1728D0FA2008CE3D0066ABBF /* ModelSingleton.swift */,
+				17C5E246200BA6A500CAA441 /* Constants.swift */,
+				17C5E248200BC2C400CAA441 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,7 +261,7 @@
 				1728D0BC20079BD60066ABBF /* Weather */,
 				1728D0BB20079BCF0066ABBF /* Recipes */,
 				1728D0BA20079BB60066ABBF /* Beds */,
-				1728D0B920079BA90066ABBF /* Controller */,
+				1728D0B920079BA90066ABBF /* Crop */,
 				17A62AC7200774B10059977D /* AppDelegate.swift */,
 				17A62AC9200774B10059977D /* TabViewController.swift */,
 				17A62ACB200774B10059977D /* Main.storyboard */,
@@ -412,22 +430,28 @@
 				1728D0C120079C750066ABBF /* RecipesViewController.swift in Sources */,
 				1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */,
 				1728D0F92008CB4B0066ABBF /* LocationsModel.swift in Sources */,
+				17C5E23D200A871F00CAA441 /* CropViewController.swift in Sources */,
+				17C5E247200BA6A500CAA441 /* Constants.swift in Sources */,
 				1728D0DA2007A4150066ABBF /* Network.swift in Sources */,
 				1728D0D32007A1660066ABBF /* BedsTableViewCell.swift in Sources */,
+				17C5E249200BC2C400CAA441 /* UserModel.swift in Sources */,
 				1728D0CF2007A1170066ABBF /* RecipeTableViewDataSource.swift in Sources */,
 				17A62ACA200774B10059977D /* TabViewController.swift in Sources */,
 				1728D0E72007B0830066ABBF /* WeatherModel.swift in Sources */,
+				17C5E243200B85C900CAA441 /* UrlBuilder.swift in Sources */,
 				1728D0D12007A1390066ABBF /* CropsTableViewDataSource.swift in Sources */,
 				1728D0EE2007B58C0066ABBF /* RecipesStruct.swift in Sources */,
 				1728D0F02007B5980066ABBF /* CropsStruct.swift in Sources */,
 				1728D0F22007B5A30066ABBF /* WeatherStruct.swift in Sources */,
-				1728D0DD2007A4CC0066ABBF /* FetchData.swift in Sources */,
+				17C5E23F200A932D00CAA441 /* AddBedViewController.swift in Sources */,
+				1728D0DD2007A4CC0066ABBF /* FetchDataBeds.swift in Sources */,
 				1728D0D72007A17D0066ABBF /* RecipesTableViewCell.swift in Sources */,
 				1728D0E32007B06B0066ABBF /* BedsModel.swift in Sources */,
 				1728D0F52008CB130066ABBF /* LocationsStruct.swift in Sources */,
 				17A62AC8200774B10059977D /* AppDelegate.swift in Sources */,
 				1728D0D52007A1720066ABBF /* CropsTableViewCell.swift in Sources */,
 				1728D0EC2007B1B90066ABBF /* BedsStruct.swift in Sources */,
+				17C5E241200A981C00CAA441 /* FetchDataCrops.swift in Sources */,
 				1728D0CD2007A0A40066ABBF /* BedsTableViewDataSource.swift in Sources */,
 				1728D0C520079C8B0066ABBF /* CropsViewController.swift in Sources */,
 				1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */,

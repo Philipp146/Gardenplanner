@@ -40,6 +40,13 @@ class BedsModel: NSObject {
         if let location = model.getLocationById(for: id){
             return location.zip + ", " + location.country
         }
-        return "No Location set"
+        return "No location set"
+    }
+    
+    func getBedNameById(for id : Int) -> String{
+        if let bed = model.getBedById(for: id){
+            return bed.name
+        }
+        return "No name set"
     }
 }

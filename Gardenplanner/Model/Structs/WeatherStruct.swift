@@ -13,7 +13,27 @@ struct WeatherStruct{
     var id : Int
     var date : Date
     var rainfall : Int
-    var sunHours : Int
+    var sunHours : Double
     var temperature : Double
     var locationId : Int
+}
+
+extension WeatherStruct{
+    init?(withJsonForName: [String : Any]) {
+        guard let id = withJsonForName["id"] as? Int,
+            let date = withJsonForName["date"] as? Date,
+            let rainfall = withJsonForName["rainfall"] as? Int,
+            let sunHours = withJsonForName["sun_Hours"] as? Double,
+            let temperature = withJsonForName["temperature"] as? Double
+            else{
+                return nil
+        }
+        
+        self.id = id
+        self.date = date
+        self.rainfall = rainfall
+        self.sunHours = sunHours
+        self.temperature = temperature
+        self.locationId = 0 //Muss noch eingefügt werden
+    }
 }

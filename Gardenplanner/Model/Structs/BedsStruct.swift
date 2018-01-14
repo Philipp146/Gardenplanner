@@ -14,4 +14,27 @@ struct BedsStruct{
     var owner : String
     var name : String
     var locationId : Int
+    var crops: [CropsStruct]
+}
+
+extension BedsStruct {
+    init?(withJsonForName: [String : Any]) {
+        guard let id = withJsonForName["id"] as? Int,
+            let name = withJsonForName["name"] as? String,
+            let location = withJsonForName["location"] as? LocationsStruct,
+        let crops = withJsonForName["crops"] as? [[String: Any]]
+        else {
+            return nil
+        }
+        
+        self.id = id
+        self.owner = "" //Muss noch ausgelesen werden
+        self.name = name
+        self.locationId = location.id
+        var cropsArray : [CropsStruct] = []
+        for i in crops{
+            cropsArray.append(CropsStruct(withJsonForName: i)!)
+        }
+        self.crops = cropsArray
+    }
 }

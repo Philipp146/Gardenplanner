@@ -8,18 +8,21 @@
 
 import UIKit
 
-class CropsViewController: UIViewController {
+class CropsViewController: UIViewController, DelegateCrop {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource : CropsTableViewDataSource!
+    var data : CropsModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dataSource = CropsTableViewDataSource()
         tableView.dataSource = dataSource
+        
+        data = CropsModel()
 
         // Do any additional setup after loading the view.
     }
@@ -29,15 +32,18 @@ class CropsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let row = tableView.indexPathForSelectedRow!.row
+        if segue.identifier == "Segue2Crop"{
+            let cropVC = segue.destination as! CropViewController
+            cropVC.delegate = self
+            cropVC.crop = data.getElement(at: row)
+        }
+        
     }
-    */
 
+}
+
+protocol DelegateCrop {
+    //func backFromCrop(_ otherVC : CropViewController, _ showAgain : Bool)
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class ModelSingleton {
     var beds : [BedsStruct] = []
-    var users : [UsersStruct] = []
+    var users =  [UsersStruct] = []
     var locations : [LocationsStruct] = []
     var crops : [CropsStruct] = []
     var recipes : [RecipesStruct] = []

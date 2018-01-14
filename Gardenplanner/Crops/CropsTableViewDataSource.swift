@@ -17,12 +17,13 @@ class CropsTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return data.numberOfEntries()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
         let entry = data.getElement(at: index)
         let cell = tableView.dequeueReusableCell(withIdentifier: "CropsCell") as! CropsTableViewCell
+        cell.name.text = entry.name
         return cell
     }
     

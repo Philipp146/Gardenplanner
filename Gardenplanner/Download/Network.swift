@@ -11,21 +11,24 @@ import Foundation
 class Network{
     
     var task : URLSessionDataTask!
+    var data = UserModel()
     
     func getData(from urlString : String, supervisor : NetworkSupervisor) -> Void
     {
         let url = URL(string: urlString)!
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: url){
+        var request = URLRequest(url: url)
+        request.httpMethod="GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Test123", forHTTPHeaderField: "token")
+        let task = URLSession.shared.dataTask(with: request){
             data, response, error in
-            
-            // Daten "atomar übergeben"
             supervisor.handleReceivedData(data as AnyObject)
         }
         task.resume()
         
     }
+    
+    
     
     func cancel () -> Void
     {
