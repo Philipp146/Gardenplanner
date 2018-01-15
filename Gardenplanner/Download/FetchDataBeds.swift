@@ -19,7 +19,6 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
         url = urlBuilder.addPath("user", url)
         url = urlBuilder.addPath(user.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!, url)
         url = urlBuilder.addPath("beds", url)
-        print(url)
         notificationStr = notify
         network.getData(from: url, supervisor: self)
     }
@@ -35,7 +34,6 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
         if json!.count > 0{
             beds.clear()
             for i in json!{
-                print(i)
                 beds.add(bed: BedsStruct(withJsonForName: i)!)
             }
         }

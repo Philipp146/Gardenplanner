@@ -10,6 +10,6 @@ import UIKit
 
 class Constants: NSObject {
     
-    public static var ip = "192.168.0.19"
+    public static var ip = "192.168.189.119"
 
 }

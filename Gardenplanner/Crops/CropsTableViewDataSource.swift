@@ -10,20 +10,21 @@ import UIKit
 
 class CropsTableViewDataSource: NSObject, UITableViewDataSource {
     
-    var data : CropsModel
+    var data : BedsModel
+    var bedsRow : Int!
     
     override init() {
-        data = CropsModel()
+        data = BedsModel()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.numberOfEntries()
+        return data.getElement(at: bedsRow).crops.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
-        let entry = data.getElement(at: index)
+        let entry = data.getElement(at: bedsRow)
         let cell = tableView.dequeueReusableCell(withIdentifier: "CropsCell") as! CropsTableViewCell
-        cell.name.text = entry.name
+        cell.name.text = entry.crops[index].name
         return cell
     }
     

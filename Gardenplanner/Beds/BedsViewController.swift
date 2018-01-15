@@ -52,6 +52,13 @@ class BedsViewController: UIViewController, DelegateAddBed{
             let addBedVC = segue.destination as! AddBedViewController
             addBedVC.delegate = self
         }
+        let row = tableView.indexPathForSelectedRow!.row
+        print("Row: \(row)")
+        if segue.identifier == "Segue2Crops"{
+            let cropsVC = segue.destination as! CropsViewController
+            print("Beds: \(row)")
+            cropsVC.bedsRow = row
+        }
     }
     
 

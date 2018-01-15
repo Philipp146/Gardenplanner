@@ -13,7 +13,7 @@ struct BedsStruct{
     var id : Int
     var owner : String
     var name : String
-    var locationId : Int
+    var location : LocationsStruct
     var crops: [CropsStruct]
 }
 
@@ -21,8 +21,8 @@ extension BedsStruct {
     init?(withJsonForName: [String : Any]) {
         guard let id = withJsonForName["id"] as? Int,
             let name = withJsonForName["name"] as? String,
-            let location = withJsonForName["location"] as? LocationsStruct,
-        let crops = withJsonForName["crops"] as? [[String: Any]]
+            let locationJsonString = withJsonForName["location"] as? [String : Any],
+            let crops = withJsonForName["crops"] as? [[String: Any]]
         else {
             return nil
         }
@@ -30,7 +30,7 @@ extension BedsStruct {
         self.id = id
         self.owner = "" //Muss noch ausgelesen werden
         self.name = name
-        self.locationId = location.id
+        self.location = LocationsStruct(withJsonForName: locationJsonString)!
         var cropsArray : [CropsStruct] = []
         for i in crops{
             cropsArray.append(CropsStruct(withJsonForName: i)!)

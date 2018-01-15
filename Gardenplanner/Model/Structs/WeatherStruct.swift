@@ -11,7 +11,7 @@ import UIKit
 struct WeatherStruct{
     
     var id : Int
-    var date : Date
+    var date : String
     var rainfall : Int
     var sunHours : Double
     var temperature : Double
@@ -21,9 +21,9 @@ struct WeatherStruct{
 extension WeatherStruct{
     init?(withJsonForName: [String : Any]) {
         guard let id = withJsonForName["id"] as? Int,
-            let date = withJsonForName["date"] as? Date,
+            let date = withJsonForName["date"] as? String,
             let rainfall = withJsonForName["rainfall"] as? Int,
-            let sunHours = withJsonForName["sun_Hours"] as? Double,
+            let sunHours = withJsonForName["sun_hours"] as? Double,
             let temperature = withJsonForName["temperature"] as? Double
             else{
                 return nil

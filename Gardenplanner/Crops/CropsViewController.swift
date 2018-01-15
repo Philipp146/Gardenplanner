@@ -14,15 +14,19 @@ class CropsViewController: UIViewController, DelegateCrop {
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource : CropsTableViewDataSource!
-    var data : CropsModel!
+    var data : BedsModel!
+    var crops : [CropsStruct]!
+    var bedsRow : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dataSource = CropsTableViewDataSource()
         tableView.dataSource = dataSource
-        
-        data = CropsModel()
+        data = BedsModel()
+        print(bedsRow)
+        crops = data.getElement(at: bedsRow).crops
+        dataSource.bedsRow = self.bedsRow
 
         // Do any additional setup after loading the view.
     }
@@ -37,7 +41,7 @@ class CropsViewController: UIViewController, DelegateCrop {
         if segue.identifier == "Segue2Crop"{
             let cropVC = segue.destination as! CropViewController
             cropVC.delegate = self
-            cropVC.crop = data.getElement(at: row)
+            cropVC.crop = crops[row]
         }
         
     }

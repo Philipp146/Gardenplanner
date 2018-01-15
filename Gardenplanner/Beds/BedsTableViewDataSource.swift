@@ -25,7 +25,8 @@ class BedsTableViewDataSource: NSObject, UITableViewDataSource {
         let entry = data.getElement(at: index)
         let cell = tableView.dequeueReusableCell(withIdentifier: "BedsCell") as! BedsTableViewCell
         cell.name.text = entry.name
-        cell.location.text = data.getLocationName(for: entry.id)
+        cell.location.text = entry.location.country
+        print(cell.location.text!)
         return cell
     }
     
