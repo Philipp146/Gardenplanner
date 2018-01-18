@@ -55,10 +55,8 @@ extension LocationsStruct{
     
     func createJSONObject(location location : LocationsStruct) -> [String : Any]{
         var jsonString : [String : Any] = [:]
-        jsonString.updateValue(location.id, forKey: "id")
         jsonString.updateValue(location.zip, forKey: "postalCode")
         jsonString.updateValue(location.city, forKey: "city")
-        jsonString.updateValue(location.weather, forKey: "weather")
         jsonString.updateValue(location.country, forKey: "country")
         jsonString.updateValue(location.indoor, forKey: "indoor")
         return jsonString

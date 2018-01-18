@@ -50,7 +50,9 @@ class Network{
         var request = createUrlRequest(urlString: urlString)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Test123", forHTTPHeaderField: "token")
+        dump(request.httpBody)
         request.httpBody = try? JSONSerialization.data(withJSONObject: json, options: [])
+        dump(request.httpBody)
         return request
     }
     

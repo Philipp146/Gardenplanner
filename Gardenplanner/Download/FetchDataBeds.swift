@@ -52,7 +52,10 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
         
         guard let data = d as? Data,
                 let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String : Any]]
-            else {return}
+            else {
+                print("Data was incorrect")
+                return
+        }
         
         if json!.count > 0{
             beds.clear()
