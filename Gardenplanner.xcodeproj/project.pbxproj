@@ -46,6 +46,8 @@
 		17C5E243200B85C900CAA441 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E242200B85C900CAA441 /* UrlBuilder.swift */; };
 		17C5E247200BA6A500CAA441 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E246200BA6A500CAA441 /* Constants.swift */; };
 		17C5E249200BC2C400CAA441 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E248200BC2C400CAA441 /* UserModel.swift */; };
+		D42404F82010BC7C00480804 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42404F72010BC7C00480804 /* LoginViewController.swift */; };
+		D42404FA2010D9D800480804 /* FetchOpenID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42404F92010D9D800480804 /* FetchOpenID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		17C5E242200B85C900CAA441 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 		17C5E246200BA6A500CAA441 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17C5E248200BC2C400CAA441 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D42404F72010BC7C00480804 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D42404F92010D9D800480804 /* FetchOpenID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOpenID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 				1728D0DC2007A4CC0066ABBF /* FetchDataBeds.swift */,
 				17C5E240200A981C00CAA441 /* FetchDataCrops.swift */,
 				17C5E242200B85C900CAA441 /* UrlBuilder.swift */,
+				D42404F92010D9D800480804 /* FetchOpenID.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				17A62AF5200781A90059977D /* Assets.xcassets */,
 				17A62AD0200774B10059977D /* LaunchScreen.storyboard */,
 				17A62AD3200774B10059977D /* Info.plist */,
+				D42404F72010BC7C00480804 /* LoginViewController.swift */,
 			);
 			path = Gardenplanner;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 				1728D0E92007B08C0066ABBF /* RecipesModel.swift in Sources */,
 				1728D0C120079C750066ABBF /* RecipesViewController.swift in Sources */,
 				1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */,
+				D42404FA2010D9D800480804 /* FetchOpenID.swift in Sources */,
 				1728D0F92008CB4B0066ABBF /* LocationsModel.swift in Sources */,
 				17C5E23D200A871F00CAA441 /* CropViewController.swift in Sources */,
 				17C5E247200BA6A500CAA441 /* Constants.swift in Sources */,
@@ -463,6 +470,7 @@
 				17A62AC8200774B10059977D /* AppDelegate.swift in Sources */,
 				1728D0D52007A1720066ABBF /* CropsTableViewCell.swift in Sources */,
 				1728D0EC2007B1B90066ABBF /* BedsStruct.swift in Sources */,
+				D42404F82010BC7C00480804 /* LoginViewController.swift in Sources */,
 				17C5E241200A981C00CAA441 /* FetchDataCrops.swift in Sources */,
 				1728D0CD2007A0A40066ABBF /* BedsTableViewDataSource.swift in Sources */,
 				1728D0C520079C8B0066ABBF /* CropsViewController.swift in Sources */,

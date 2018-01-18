@@ -29,7 +29,7 @@ class IPViewController: UIViewController {
     @IBAction func saveIP(_ sender: Any) {
         if ipTextField.hasText{
             Constants.ip = ipTextField.text!
-            performSegue(withIdentifier: "Segue2TabVC", sender: nil)
+            performSegue(withIdentifier: "SegueLogin", sender: nil)
         }else{
             print("i was here")
             ipLabel.textColor = UIColor.red

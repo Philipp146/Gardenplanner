@@ -12,27 +12,27 @@ class UserModel: NSObject {
 
     fileprivate var model = ModelSingleton.sharedInstance
     
-    func numberOfEntries() -> Int{
-        return model.users.count
-    }
+//    func numberOfEntries() -> Int{
+//        return model.users.count
+//    }
     
-    func add(user : UsersStruct){
-        model.users.append(user)
-    }
+//    func add(user : UsersStruct){
+//        model.users.append(user)
+//    }
     
-    func set(users : [UsersStruct]){
-        model.users = users
-    }
+//    func set(users : UsersStruct){
+//        model.user = users
+//    }
+//
+//    func getElement() -> UsersStruct{
+//        return model.user
+//    }
     
-    func getElement(at position : Int) -> UsersStruct{
-        return model.users[position]
-    }
+//    func remove(){
+//        model.user
+//    }
     
-    func remove(at position : Int){
-        model.users.remove(at: position)
-    }
-    
-    func clear(){
-        model.users = []
-    }
+//    func clear(){
+//        model.user = UsersStruct()
+//    }
 }

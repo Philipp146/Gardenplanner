@@ -10,11 +10,13 @@ import UIKit
 
 class ModelSingleton {
     var beds : [BedsStruct] = []
-    var users : [UsersStruct] = []
+    var user : UsersStruct!
     var locations : [LocationsStruct] = []
     var crops : [CropsStruct] = []
     var recipes : [RecipesStruct] = []
     var weathers : [WeatherStruct] = []
+    var htmlContent: String = ""
+    
     static let sharedInstance = ModelSingleton()
     
     func getLocationById(for id : Int) -> LocationsStruct?{
@@ -26,14 +28,14 @@ class ModelSingleton {
         return nil
     }
     
-    func getUserByMail(for mail : String) -> UsersStruct?{
-        for i in users{
-            if mail == i.email{
-                return i
-            }
-        }
-        return nil
-    }
+//    func getUserByMail(for mail : String) -> UsersStruct?{
+//        for i in users{
+//            if mail == i.email{
+//                return i
+//            }
+//        }
+//        return nil
+//    }
     
     func getBedById(for id : Int) -> BedsStruct?{
         dump(beds)
