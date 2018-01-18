@@ -28,5 +28,19 @@ class CropsTableViewDataSource: NSObject, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let index = indexPath.row
+            let entry = data.getElement(at: bedsRow)
+            let fetch = FetchDataCrops()
+            fetch.deleteCrop(for: "maxi@sonntags.net", notify: "notify", crop: entry.crops[index].id, bed: entry.id)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
 
 }

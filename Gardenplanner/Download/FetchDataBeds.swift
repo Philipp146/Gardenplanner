@@ -22,9 +22,19 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
     
     func deleteBed(for user: String, notify : String, bed bedId : Int){
         var url = createUrl(for: user)
-        url = urlBuilder.addPath("\(bedId, url)",url)
+        url = urlBuilder.addPath("\(bedId)",url)
         notificationStr = notify
         network.deleteData(from: url, supervisor: self)
+    }
+    
+    func postBed(for user: String, notify : String, bedJsonString bed : [String : Any]){
+        let url = createUrl(for: user)
+        notificationStr = notify
+        if(JSONSerialization.isValidJSONObject(bed)){
+            network.postData(to: url, jsonObject: bed , supervisor: self)
+        }else{
+            print("BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM")
+        }
     }
     
     fileprivate func createUrl(for user : String) -> String{

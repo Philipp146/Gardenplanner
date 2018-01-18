@@ -40,6 +40,7 @@ class BedsTableViewDataSource: NSObject, UITableViewDataSource {
         if editingStyle == .delete{
             let fetchDataBeds = FetchDataBeds()
             fetchDataBeds.deleteBed(for: "maxi@sonntags.net", notify: "notify", bed: entry.id)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

@@ -206,6 +206,12 @@
                                     <segment title="Inside"/>
                                 </segments>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUz-5k-KXW">
+                                <rect key="frame" x="166" y="384" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -233,19 +239,28 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RXb-RR-x45" secondAttribute="trailing" constant="20" symbolic="YES" id="giP-FL-BGm"/>
                             <constraint firstItem="DDq-TE-opd" firstAttribute="leading" secondItem="hx2-Sv-C4D" secondAttribute="leading" constant="8" id="hHY-ct-6WD"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ofy-oH-NlV" secondAttribute="trailing" constant="20" symbolic="YES" id="hnt-VN-QJV"/>
+                            <constraint firstItem="NUz-5k-KXW" firstAttribute="centerX" secondItem="2ey-9W-3jm" secondAttribute="centerX" id="kQX-6A-Aqg"/>
                             <constraint firstItem="VU7-aw-CRc" firstAttribute="leading" secondItem="hx2-Sv-C4D" secondAttribute="leading" constant="8" id="m8I-Ot-Dda"/>
                             <constraint firstItem="ofy-oH-NlV" firstAttribute="top" secondItem="DDq-TE-opd" secondAttribute="bottom" constant="8" id="psI-S2-ghq"/>
                             <constraint firstItem="XPB-cJ-V7O" firstAttribute="leading" secondItem="hx2-Sv-C4D" secondAttribute="leading" constant="8" id="sEd-Q1-dAb"/>
                             <constraint firstItem="RXb-RR-x45" firstAttribute="leading" secondItem="hx2-Sv-C4D" secondAttribute="leading" constant="8" id="sOT-jx-WGU"/>
+                            <constraint firstItem="NUz-5k-KXW" firstAttribute="top" secondItem="MQp-uj-u9h" secondAttribute="bottom" constant="8" id="uw3-x2-SMf"/>
                             <constraint firstItem="PZ7-wF-Ufs" firstAttribute="top" secondItem="RXb-RR-x45" secondAttribute="bottom" constant="8" id="wyo-Am-V7w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hx2-Sv-C4D"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create a new bed" id="wVx-2M-1yn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="m7U-xu-wUF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="m7U-xu-wUF">
+                            <connections>
+                                <action selector="saveAndPost:" destination="KKG-Nn-Lny" id="s84-U1-zat"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cityName" destination="PZ7-wF-Ufs" id="3Cs-vo-vz2"/>
                         <outlet property="countryTextField" destination="DDq-TE-opd" id="dQY-iB-zN4"/>
+                        <outlet property="indoor" destination="MQp-uj-u9h" id="zBS-Tp-sB9"/>
+                        <outlet property="messageLabel" destination="NUz-5k-KXW" id="gr4-sZ-VD0"/>
                         <outlet property="nameTextField" destination="XPB-cJ-V7O" id="hSp-ld-puU"/>
                         <outlet property="zipTextField" destination="A70-h9-idA" id="Kzw-f7-R0A"/>
                     </connections>

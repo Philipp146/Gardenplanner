@@ -43,4 +43,24 @@ extension LocationsStruct{
         self.indoor = indoor
         
     }
+    
+    init(zip : String, city : String, country : String, indoor : Bool) {
+        self.id = 0
+        self.zip = zip
+        self.city = city
+        self.country = country
+        self.indoor = indoor
+        self.weather = []
+    }
+    
+    func createJSONObject(location location : LocationsStruct) -> [String : Any]{
+        var jsonString : [String : Any] = [:]
+        jsonString.updateValue(location.id, forKey: "id")
+        jsonString.updateValue(location.zip, forKey: "postalCode")
+        jsonString.updateValue(location.city, forKey: "city")
+        jsonString.updateValue(location.weather, forKey: "weather")
+        jsonString.updateValue(location.country, forKey: "country")
+        jsonString.updateValue(location.indoor, forKey: "indoor")
+        return jsonString
+    }
 }

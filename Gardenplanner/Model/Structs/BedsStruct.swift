@@ -37,4 +37,21 @@ extension BedsStruct {
         }
         self.crops = cropsArray
     }
+    
+    init(name name : String, location location : LocationsStruct) {
+        id = 0
+        owner = ""
+        self.name = name
+        self.location = location
+        self.crops = []
+    }
+    
+    func createJSONObject(bed bed : BedsStruct) -> [String : Any]{
+        var jsonString : [String : Any] = [:]
+        jsonString.updateValue(bed.id, forKey: "id")
+        jsonString.updateValue(bed.name, forKey: "name")
+        jsonString.updateValue(bed.location.createJSONObject(location: location), forKey: "location")
+        jsonString.updateValue(bed.crops, forKey: "crops")
+        return jsonString
+    }
 }
