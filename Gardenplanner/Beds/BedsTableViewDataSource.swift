@@ -25,9 +25,22 @@ class BedsTableViewDataSource: NSObject, UITableViewDataSource {
         let entry = data.getElement(at: index)
         let cell = tableView.dequeueReusableCell(withIdentifier: "BedsCell") as! BedsTableViewCell
         cell.name.text = entry.name
-        cell.location.text = entry.location.country
+        cell.location.text = "\(entry.location.zip), \(entry.location.city), \(entry.location.country)"
         print(cell.location.text!)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let index = indexPath.row
+        let entry = data.getElement(at: index)
+        if editingStyle == .delete{
+            let fetchDataBeds = FetchDataBeds()
+            fetchDataBeds.deleteBed(for: "maxi@sonntags.net", notify: "notify", bed: entry.id)
+        }
     }
     
     

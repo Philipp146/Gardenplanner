@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170F5AF220109EA000A74B81 /* IPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F5AF120109EA000A74B81 /* IPViewController.swift */; };
 		1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0BE20079C640066ABBF /* BedsViewController.swift */; };
 		1728D0C120079C750066ABBF /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C020079C750066ABBF /* RecipesViewController.swift */; };
 		1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C220079C7E0066ABBF /* WeatherViewController.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170F5AF120109EA000A74B81 /* IPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPViewController.swift; sourceTree = "<group>"; };
 		1728D0BE20079C640066ABBF /* BedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedsViewController.swift; sourceTree = "<group>"; };
 		1728D0C020079C750066ABBF /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		1728D0C220079C7E0066ABBF /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170F5AF020109E7F00A74B81 /* Start Screens */ = {
+			isa = PBXGroup;
+			children = (
+				170F5AF120109EA000A74B81 /* IPViewController.swift */,
+			);
+			path = "Start Screens";
+			sourceTree = "<group>";
+		};
 		1728D0B920079BA90066ABBF /* Crop */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +265,7 @@
 		17A62AC6200774B10059977D /* Gardenplanner */ = {
 			isa = PBXGroup;
 			children = (
+				170F5AF020109E7F00A74B81 /* Start Screens */,
 				1728D0E12007B0520066ABBF /* Model */,
 				1728D0D82007A4000066ABBF /* Download */,
 				1728D0BD20079C100066ABBF /* Crops */,
@@ -443,6 +454,7 @@
 				1728D0EE2007B58C0066ABBF /* RecipesStruct.swift in Sources */,
 				1728D0F02007B5980066ABBF /* CropsStruct.swift in Sources */,
 				1728D0F22007B5A30066ABBF /* WeatherStruct.swift in Sources */,
+				170F5AF220109EA000A74B81 /* IPViewController.swift in Sources */,
 				17C5E23F200A932D00CAA441 /* AddBedViewController.swift in Sources */,
 				1728D0DD2007A4CC0066ABBF /* FetchDataBeds.swift in Sources */,
 				1728D0D72007A17D0066ABBF /* RecipesTableViewCell.swift in Sources */,

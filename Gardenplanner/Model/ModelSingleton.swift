@@ -36,6 +36,7 @@ class ModelSingleton {
     }
     
     func getBedById(for id : Int) -> BedsStruct?{
+        dump(beds)
         for i in beds{
             if id == i.id{
                 return i

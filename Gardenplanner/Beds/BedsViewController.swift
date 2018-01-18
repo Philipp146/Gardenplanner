@@ -52,25 +52,13 @@ class BedsViewController: UIViewController, DelegateAddBed{
             let addBedVC = segue.destination as! AddBedViewController
             addBedVC.delegate = self
         }
-        let row = tableView.indexPathForSelectedRow!.row
-        print("Row: \(row)")
         if segue.identifier == "Segue2Crops"{
             let cropsVC = segue.destination as! CropsViewController
+            let row = tableView.indexPathForSelectedRow!.row
             print("Beds: \(row)")
             cropsVC.bedsRow = row
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

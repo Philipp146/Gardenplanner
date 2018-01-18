@@ -37,9 +37,10 @@ class CropsViewController: UIViewController, DelegateCrop {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let row = tableView.indexPathForSelectedRow!.row
+        
         if segue.identifier == "Segue2Crop"{
             let cropVC = segue.destination as! CropViewController
+            let row = tableView.indexPathForSelectedRow!.row
             cropVC.delegate = self
             cropVC.crop = crops[row]
         }

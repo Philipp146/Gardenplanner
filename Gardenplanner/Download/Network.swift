@@ -32,9 +32,9 @@ class Network{
         makeTask(with: request, handleReceivedData: false, supervisor)
     }
     
-    func deleteData(to urlString: String, supervisor: NetworkSupervisor){
+    func deleteData(from urlString: String, supervisor: NetworkSupervisor){
         var request = createRequestWithoutBody(urlString: urlString)
-        request.httpMethod="DELETE"
+        request.httpMethod = "DELETE"
         makeTask(with: request, handleReceivedData: false, supervisor)
     }
     
