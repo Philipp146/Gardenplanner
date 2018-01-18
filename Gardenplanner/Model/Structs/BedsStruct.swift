@@ -48,10 +48,8 @@ extension BedsStruct {
     
     func createJSONObject(bed bed : BedsStruct) -> [String : Any]{
         var jsonString : [String : Any] = [:]
-        jsonString.updateValue(bed.id, forKey: "id")
         jsonString.updateValue(bed.name, forKey: "name")
         jsonString.updateValue(bed.location.createJSONObject(location: location), forKey: "location")
-        jsonString.updateValue(bed.crops, forKey: "crops")
         return jsonString
     }
 }
