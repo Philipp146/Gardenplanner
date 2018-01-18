@@ -20,16 +20,16 @@ class Network{
         makeTask(with: request, handleReceivedData: true, supervisor)
     }
     
-    func postData(to urlString: String, jsongString json: String, supervisor : NetworkSupervisor){
-        var request = createRequestWithBody(urlString: urlString, jsonString: json)
+    func postData(to urlString: String, jsonObject json: [String : Any], supervisor : NetworkSupervisor){
+        var request = createRequestWithBody(urlString: urlString, jsonObject: json)
         request.httpMethod="POST"
-        makeTask(with: request, handleReceivedData : false, supervisor)
+        makeTask(with: request, handleReceivedData : true, supervisor)
     }
     
-    func putData(to urlString: String, jsonString json: String, supervisor: NetworkSupervisor){
-        var request = createRequestWithBody(urlString: urlString, jsonString: json)
+    func putData(to urlString: String, jsonObject json: [String : Any], supervisor: NetworkSupervisor){
+        var request = createRequestWithBody(urlString: urlString, jsonObject: json)
         request.httpMethod="PUT"
-        makeTask(with: request, handleReceivedData: false, supervisor)
+        makeTask(with: request, handleReceivedData: true, supervisor)
     }
     
     func deleteData(from urlString: String, supervisor: NetworkSupervisor){
@@ -46,11 +46,11 @@ class Network{
         return request
     }
     
-    func createRequestWithBody(urlString : String, jsonString json: String) -> URLRequest{
+    func createRequestWithBody(urlString : String, jsonObject json: [String : Any]) -> URLRequest{
         var request = createUrlRequest(urlString: urlString)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Test123", forHTTPHeaderField: "token")
-        request.httpBody = json.data(using: .utf8)
+        request.httpBody = try? JSONSerialization.data(withJSONObject: json, options: [])
         return request
     }
     
