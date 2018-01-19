@@ -29,8 +29,14 @@ class BedsViewController: UIViewController, DelegateAddBed{
         
         nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(handleNotification), name: NSNotification.Name(notifyString), object: nil)
-        // Do any additional setup after loading the view.
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(signOutUser))
     }
+    
+    @objc func signOutUser(){
+        GIDSignIn.sharedInstance().signOut()
+        performSegue(withIdentifier: "Bed2IpVC", sender: nil)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

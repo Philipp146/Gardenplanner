@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jO3-aC-5Dh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jO3-aC-5Dh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -356,6 +356,7 @@
                     <connections>
                         <outlet property="searchBar" destination="dDk-EW-bSP" id="Uqj-EX-B7I"/>
                         <outlet property="tableView" destination="4La-H8-hej" id="opH-sF-LzQ"/>
+                        <segue destination="jO3-aC-5Dh" kind="show" identifier="Bed2IpVC" id="GIM-Ci-5RZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5Z-DA-2Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -546,7 +547,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ula-S7-sDe">
-                                <rect key="frame" x="170" y="356" width="34" height="30"/>
+                                <rect key="frame" x="170" y="356" width="34" height="24"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveIP:" destination="jO3-aC-5Dh" eventType="touchUpInside" id="LjP-Xt-6cI"/>
@@ -558,17 +559,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8n-6a-liZ" customClass="GIDSignInButton">
+                                <rect key="frame" x="129" y="388" width="117" height="0.0"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dO2-sy-rsC" firstAttribute="bottom" secondItem="u8n-6a-liZ" secondAttribute="bottom" constant="230" id="1JF-UB-4Yb"/>
                             <constraint firstItem="Aft-Mn-1jH" firstAttribute="centerX" secondItem="G8b-ff-GYt" secondAttribute="centerX" id="5Ow-cJ-fQz"/>
+                            <constraint firstItem="dO2-sy-rsC" firstAttribute="trailing" secondItem="u8n-6a-liZ" secondAttribute="trailing" constant="129" id="70W-7a-ab6"/>
                             <constraint firstItem="Aft-Mn-1jH" firstAttribute="leading" secondItem="dO2-sy-rsC" secondAttribute="leading" constant="8" id="AJe-sL-epS"/>
                             <constraint firstItem="WsR-6C-UMF" firstAttribute="centerX" secondItem="G8b-ff-GYt" secondAttribute="centerX" id="BgZ-2w-oVY"/>
                             <constraint firstItem="dO2-sy-rsC" firstAttribute="trailing" secondItem="Aft-Mn-1jH" secondAttribute="trailing" constant="8" id="FdT-Sv-LLg"/>
                             <constraint firstItem="ula-S7-sDe" firstAttribute="top" secondItem="Aft-Mn-1jH" secondAttribute="bottom" constant="8" id="Fts-hY-q1Y"/>
                             <constraint firstItem="Aft-Mn-1jH" firstAttribute="top" secondItem="WsR-6C-UMF" secondAttribute="bottom" constant="8" id="Iue-Mc-JRR"/>
                             <constraint firstItem="ula-S7-sDe" firstAttribute="centerX" secondItem="G8b-ff-GYt" secondAttribute="centerX" id="Tz6-mf-rm8"/>
+                            <constraint firstItem="u8n-6a-liZ" firstAttribute="leading" secondItem="dO2-sy-rsC" secondAttribute="leading" constant="129" id="eug-ve-ZWo"/>
+                            <constraint firstItem="u8n-6a-liZ" firstAttribute="top" secondItem="ula-S7-sDe" secondAttribute="bottom" constant="8" id="iM5-xb-wwt"/>
                             <constraint firstItem="Aft-Mn-1jH" firstAttribute="centerY" secondItem="G8b-ff-GYt" secondAttribute="centerY" id="ist-xd-qbG"/>
+                            <constraint firstItem="u8n-6a-liZ" firstAttribute="centerX" secondItem="G8b-ff-GYt" secondAttribute="centerX" id="scY-rm-1dh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dO2-sy-rsC"/>
                     </view>
@@ -580,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxV-FM-NLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2890" y="-253"/>
+            <point key="canvasLocation" x="-2890.4000000000001" y="-253.2233883058471"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="Rsa-a0-ex1">
