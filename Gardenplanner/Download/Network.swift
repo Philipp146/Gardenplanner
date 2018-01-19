@@ -10,6 +10,12 @@ import Foundation
 
 class Network{
     
+    enum IsRequestType {
+        case get
+        case delete
+        case post
+    }
+    
     var task : URLSessionDataTask!
     var data = UserModel()
     
@@ -17,25 +23,25 @@ class Network{
     {
         var request = createRequestWithoutBody(urlString: urlString)
         request.httpMethod="GET"
-        makeTask(with: request, handleReceivedData: true, supervisor)
+        makeTask(with: request, handleReceivedData: .get, supervisor)
     }
     
     func postData(to urlString: String, jsonObject json: [String : Any], supervisor : NetworkSupervisor){
         var request = createRequestWithBody(urlString: urlString, jsonObject: json)
         request.httpMethod="POST"
-        makeTask(with: request, handleReceivedData : true, supervisor)
+        makeTask(with: request, handleReceivedData : .post, supervisor)
     }
     
     func putData(to urlString: String, jsonObject json: [String : Any], supervisor: NetworkSupervisor){
         var request = createRequestWithBody(urlString: urlString, jsonObject: json)
         request.httpMethod="PUT"
-        makeTask(with: request, handleReceivedData: true, supervisor)
+        makeTask(with: request, handleReceivedData: .post, supervisor)
     }
     
     func deleteData(from urlString: String, supervisor: NetworkSupervisor){
         var request = createRequestWithoutBody(urlString: urlString)
         request.httpMethod = "DELETE"
-        makeTask(with: request, handleReceivedData: false, supervisor)
+        makeTask(with: request, handleReceivedData: .delete, supervisor)
     }
     
     
@@ -63,12 +69,9 @@ class Network{
         return request
     }
 
-    fileprivate func makeTask(with request : URLRequest, handleReceivedData isGetRequest : Bool, _ supervisor: NetworkSupervisor){
+    fileprivate func makeTask(with request : URLRequest, handleReceivedData isRequestType : IsRequestType, _ supervisor: NetworkSupervisor){
         let task = URLSession.shared.dataTask(with: request){
             data,response,error in
-            if isGetRequest{
-                supervisor.handleReceivedData(data as AnyObject)
-            }
             // check for fundamental networking error
             guard let data = data, error == nil else {
                 print("error=\(String(describing: error))")
@@ -78,6 +81,12 @@ class Network{
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(String(describing: response))")
+            }
+            
+            if isRequestType == .get{
+                supervisor.handleReceivedData(data)
+            }else if isRequestType == .post{
+                supervisor.handleReceivedPostData(data)
             }
             
             let responseString = String(data: data, encoding: .utf8)

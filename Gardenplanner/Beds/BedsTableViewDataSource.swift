@@ -34,15 +34,6 @@ class BedsTableViewDataSource: NSObject, UITableViewDataSource {
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let index = indexPath.row
-        let entry = data.getElement(at: index)
-        if editingStyle == .delete{
-            let fetchDataBeds = FetchDataBeds()
-            fetchDataBeds.deleteBed(for: "maxi@sonntags.net", notify: "notify", bed: entry.id)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
     
     
 

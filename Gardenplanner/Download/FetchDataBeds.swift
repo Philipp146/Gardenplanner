@@ -37,6 +37,16 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
         }
     }
     
+    func putBed(for user: String, notify : String, bed bedId : Int, bedJsonString bed : [String : Any]){
+        var url = createUrl(for: user)
+        url = urlBuilder.addPath("\(bedId)", url)
+        notificationStr = notify
+        if JSONSerialization.isValidJSONObject(bed){
+            network.putData(to: url, jsonObject: bed, supervisor: self)
+        }
+        
+    }
+    
     fileprivate func createUrl(for user : String) -> String{
         var url = urlBuilder.createBaseUrl()
         url = urlBuilder.addPath("user", url)
@@ -45,13 +55,11 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
         return url
     }
         
-    func handleReceivedData(_ d:AnyObject) -> Void
+    func handleReceivedData(_ d:Data) -> Void
     {
         let nc = NotificationCenter.default
         let beds = BedsModel()
-        
-        guard let data = d as? Data,
-                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String : Any]]
+        guard let json = try? JSONSerialization.jsonObject(with: d, options: []) as? [[String : Any]]
             else {
                 print("Data was incorrect")
                 return
@@ -63,6 +71,18 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
                 beds.add(bed: BedsStruct(withJsonForName: i)!)
             }
         }
+        nc.post(name: NSNotification.Name(notificationStr), object: nil)
+    }
+    
+    func handleReceivedPostData(_ d: Data) {
+        let nc = NotificationCenter.default
+        let beds = BedsModel()
+        guard let json = try? JSONSerialization.jsonObject(with: d, options: []) as? [String : Any]
+            else {
+                print("Data was incorrect")
+                return
+        }
+        beds.add(bed: BedsStruct(withJsonForName: json!)!)
         nc.post(name: NSNotification.Name(notificationStr), object: nil)
     }
         

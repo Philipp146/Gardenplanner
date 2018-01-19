@@ -19,10 +19,25 @@ class AddBedViewController: UIViewController {
     
     var delegate : DelegateAddBed!
     
+    var name = ""
+    var country = ""
+    var zip = ""
+    var city = ""
+    var indoorSegment = 0
+    
+    var isPutRequest = false
+    var idForPutRequest = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         messageLabel.textColor = UIColor.red
         messageLabel.text = ""
+        
+        nameTextField.text = name
+        countryTextField.text = country
+        zipTextField.text = zip
+        cityName.text = city
+        indoor.selectedSegmentIndex = indoorSegment
 
         // Do any additional setup after loading the view.
     }
@@ -44,7 +59,12 @@ class AddBedViewController: UIViewController {
         }
         let location = LocationsStruct(zip: zip, city: city, country: country, indoor: indoor.selectedSegmentIndex==1)
         let bed = BedsStruct(name: name, location: location)
-        fetchDataBeds.postBed(for: "maxi@sonntags.net", notify: "POST", bedJsonString: bed.createJSONObject(bed: bed))
+        if isPutRequest{
+            fetchDataBeds.putBed(for: "maxi@sonntags.net", notify: "BedsLoaded", bed: idForPutRequest, bedJsonString: bed.createJSONObject(bed: bed))
+        }else{
+            fetchDataBeds.postBed(for: "maxi@sonntags.net", notify: "BedsLoaded", bedJsonString: bed.createJSONObject(bed: bed))
+        }
+        
     }
     
     /*

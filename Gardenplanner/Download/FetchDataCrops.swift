@@ -14,7 +14,11 @@ class FetchDataCrops: NSObject, NetworkSupervisor{
     var notificationStr = ""
     let network = Network()
     
-    func handleReceivedData(_ d: AnyObject) {
+    func handleReceivedData(_ d: Data) {
+        
+    }
+    
+    func handleReceivedPostData(_ d: Data) {
         
     }
     

@@ -267,7 +267,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQY-ZF-4k8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="927" y="-1325"/>
+            <point key="canvasLocation" x="1036" y="-1347"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fxD-7T-8ER">
+            <objects>
+                <viewController id="vVD-dX-WFm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="41G-N7-Q5B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lz-u9-2qX">
+                                <rect key="frame" x="16" y="77" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Xda-XZ-KdE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0c-du-3NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="-1347"/>
         </scene>
         <!--Beds-->
         <scene sceneID="Kjf-ng-i72">
@@ -336,26 +360,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4La-H8-hej" firstAttribute="trailing" secondItem="uLz-Zk-Hai" secondAttribute="trailing" id="5xQ-jL-4bB"/>
-                            <constraint firstItem="4La-H8-hej" firstAttribute="bottom" secondItem="uLz-Zk-Hai" secondAttribute="bottom" id="B4Z-Sy-Lyd"/>
-                            <constraint firstItem="dDk-EW-bSP" firstAttribute="leading" secondItem="uLz-Zk-Hai" secondAttribute="leading" id="E4b-xB-gRC"/>
-                            <constraint firstItem="dDk-EW-bSP" firstAttribute="top" secondItem="uLz-Zk-Hai" secondAttribute="top" id="PzL-AL-CWq"/>
-                            <constraint firstItem="4La-H8-hej" firstAttribute="top" secondItem="dDk-EW-bSP" secondAttribute="bottom" id="iLQ-W7-cMU"/>
-                            <constraint firstItem="dDk-EW-bSP" firstAttribute="trailing" secondItem="uLz-Zk-Hai" secondAttribute="trailing" id="mP0-Jx-0ST"/>
-                            <constraint firstItem="4La-H8-hej" firstAttribute="leading" secondItem="uLz-Zk-Hai" secondAttribute="leading" id="yxb-K2-VIC"/>
+                            <constraint firstItem="uLz-Zk-Hai" firstAttribute="trailing" secondItem="dDk-EW-bSP" secondAttribute="trailing" id="22u-WY-7A8"/>
+                            <constraint firstItem="4La-H8-hej" firstAttribute="top" secondItem="dDk-EW-bSP" secondAttribute="bottom" id="7bS-Ya-ZVn"/>
+                            <constraint firstItem="dDk-EW-bSP" firstAttribute="top" secondItem="uLz-Zk-Hai" secondAttribute="top" id="OuY-SR-Uyt"/>
+                            <constraint firstItem="4La-H8-hej" firstAttribute="trailing" secondItem="uLz-Zk-Hai" secondAttribute="trailing" id="Sj5-ln-8n5"/>
+                            <constraint firstItem="4La-H8-hej" firstAttribute="leading" secondItem="uLz-Zk-Hai" secondAttribute="leading" id="T5j-pO-WaX"/>
+                            <constraint firstItem="4La-H8-hej" firstAttribute="bottom" secondItem="uLz-Zk-Hai" secondAttribute="bottom" id="x3D-Pm-lk5"/>
+                            <constraint firstItem="dDk-EW-bSP" firstAttribute="leading" secondItem="uLz-Zk-Hai" secondAttribute="leading" id="zH7-cq-SRn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uLz-Zk-Hai"/>
                     </view>
                     <navigationItem key="navigationItem" title="Beds" id="Kp3-XQ-DfS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zU2-FW-72S">
                             <connections>
-                                <segue destination="KKG-Nn-Lny" kind="show" id="aRk-jV-DwX"/>
+                                <action selector="add:" destination="aoG-d7-ENd" id="Efm-X6-04H"/>
+                                <segue destination="KKG-Nn-Lny" kind="show" identifier="Segue2AddBed" id="aRk-jV-DwX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="dDk-EW-bSP" id="Uqj-EX-B7I"/>
-                        <outlet property="tableView" destination="4La-H8-hej" id="opH-sF-LzQ"/>
+                        <outlet property="tableView" destination="4La-H8-hej" id="HR1-Ev-0uw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5Z-DA-2Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -428,7 +453,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YPa-y4-KV7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Crops" id="nml-8I-wcB"/>
+                    <navigationItem key="navigationItem" title="Crops" id="nml-8I-wcB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zLz-Ou-KeO">
+                            <connections>
+                                <segue destination="vVD-dX-WFm" kind="show" id="QvA-MP-6n6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="fnz-c9-I8E" id="eTm-Qa-Epz"/>
                         <outlet property="tableView" destination="ar1-OE-wuM" id="L1K-86-bt6"/>
