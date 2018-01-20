@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		170F5AF220109EA000A74B81 /* IPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F5AF120109EA000A74B81 /* IPViewController.swift */; };
+		1710424720139C0F00526F9B /* AddCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710424620139C0F00526F9B /* AddCropViewController.swift */; };
+		171042492013A84B00526F9B /* CropsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171042482013A84B00526F9B /* CropsTableViewDelegate.swift */; };
 		1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0BE20079C640066ABBF /* BedsViewController.swift */; };
 		1728D0C120079C750066ABBF /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C020079C750066ABBF /* RecipesViewController.swift */; };
 		1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C220079C7E0066ABBF /* WeatherViewController.swift */; };
@@ -68,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		170F5AF120109EA000A74B81 /* IPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPViewController.swift; sourceTree = "<group>"; };
+		1710424620139C0F00526F9B /* AddCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCropViewController.swift; sourceTree = "<group>"; };
+		171042482013A84B00526F9B /* CropsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsTableViewDelegate.swift; sourceTree = "<group>"; };
 		1728D0BE20079C640066ABBF /* BedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedsViewController.swift; sourceTree = "<group>"; };
 		1728D0C020079C750066ABBF /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		1728D0C220079C7E0066ABBF /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -161,9 +165,9 @@
 			children = (
 				1728D0BE20079C640066ABBF /* BedsViewController.swift */,
 				1728D0CC2007A0A40066ABBF /* BedsTableViewDataSource.swift */,
+				17E8AD0720110DA4000EEC1E /* BedsTableViewDelegate.swift */,
 				1728D0D22007A1660066ABBF /* BedsTableViewCell.swift */,
 				17C5E23E200A932D00CAA441 /* AddBedViewController.swift */,
-				17E8AD0720110DA4000EEC1E /* BedsTableViewDelegate.swift */,
 			);
 			path = Beds;
 			sourceTree = "<group>";
@@ -191,7 +195,9 @@
 			children = (
 				1728D0C420079C8B0066ABBF /* CropsViewController.swift */,
 				1728D0D02007A1390066ABBF /* CropsTableViewDataSource.swift */,
+				171042482013A84B00526F9B /* CropsTableViewDelegate.swift */,
 				1728D0D42007A1720066ABBF /* CropsTableViewCell.swift */,
+				1710424620139C0F00526F9B /* AddCropViewController.swift */,
 			);
 			path = Crops;
 			sourceTree = "<group>";
@@ -456,10 +462,12 @@
 				1728D0D12007A1390066ABBF /* CropsTableViewDataSource.swift in Sources */,
 				1728D0EE2007B58C0066ABBF /* RecipesStruct.swift in Sources */,
 				1728D0F02007B5980066ABBF /* CropsStruct.swift in Sources */,
+				171042492013A84B00526F9B /* CropsTableViewDelegate.swift in Sources */,
 				1728D0F22007B5A30066ABBF /* WeatherStruct.swift in Sources */,
 				170F5AF220109EA000A74B81 /* IPViewController.swift in Sources */,
 				17C5E23F200A932D00CAA441 /* AddBedViewController.swift in Sources */,
 				1728D0DD2007A4CC0066ABBF /* FetchDataBeds.swift in Sources */,
+				1710424720139C0F00526F9B /* AddCropViewController.swift in Sources */,
 				1728D0D72007A17D0066ABBF /* RecipesTableViewCell.swift in Sources */,
 				1728D0E32007B06B0066ABBF /* BedsModel.swift in Sources */,
 				17E8AD0820110DA4000EEC1E /* BedsTableViewDelegate.swift in Sources */,

@@ -54,8 +54,12 @@ class AddBedViewController: UIViewController {
             let country = countryTextField.text,
             let name = nameTextField.text
             else{
-           messageLabel.text = "You need to fill everything"
+           messageLabel.text = "Something went terribly wrong"
                 return
+        }
+        if zipTextField.text == "" || cityName.text == "" || countryTextField.text == "" || nameTextField.text == "" {
+            messageLabel.text = "You need to fill everything"
+            return
         }
         let location = LocationsStruct(zip: zip, city: city, country: country, indoor: indoor.selectedSegmentIndex==1)
         let bed = BedsStruct(name: name, location: location)

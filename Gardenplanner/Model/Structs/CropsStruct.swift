@@ -42,5 +42,27 @@ extension CropsStruct {
         self.lastPoured = lastPoured
         self.maturingTime = maturingTime
     }
+    
+    init(name : String, description : String, sowDate : String, waterInterval : String, lastPoured : String, maturingTime : String){
+        self.id = 0
+        self.bedId = 0
+        self.name = name
+        self.description = description
+        self.sowDate = sowDate
+        self.waterInterval = waterInterval
+        self.lastPoured = lastPoured
+        self.maturingTime = maturingTime
+    }
+    
+    func createJsonObject(crop : CropsStruct) -> [String : Any]{
+        var jsonString : [String : Any] = [:]
+        jsonString.updateValue(crop.name, forKey: "name")
+        jsonString.updateValue(crop.description, forKey: "description")
+        jsonString.updateValue(crop.sowDate, forKey: "sowDate")
+        jsonString.updateValue(crop.waterInterval, forKey: "waterInterval")
+        jsonString.updateValue(crop.lastPoured, forKey: "lastPoured")
+        jsonString.updateValue(crop.maturingTime, forKey: "maturingTime")
+        return jsonString
+    }
 }
 
