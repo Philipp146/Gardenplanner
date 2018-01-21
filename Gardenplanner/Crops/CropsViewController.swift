@@ -14,15 +14,22 @@ class CropsViewController: UIViewController, DelegateCrop {
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource : CropsTableViewDataSource!
+    var delegate : CropsTableViewDelegate!
     var data : BedsModel!
     var crops : [CropsStruct]!
     var bedsRow : Int!
+    var isPutRequest = false
+    var idForPutRequest = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dataSource = CropsTableViewDataSource()
         tableView.dataSource = dataSource
+        delegate = CropsTableViewDelegate()
+        delegate.bedRow = self.bedsRow
+        delegate.vc = self
+        tableView.delegate = delegate
         data = BedsModel()
         print(bedsRow)
         crops = data.getElement(at: bedsRow).crops
@@ -43,6 +50,18 @@ class CropsViewController: UIViewController, DelegateCrop {
             let row = tableView.indexPathForSelectedRow!.row
             cropVC.delegate = self
             cropVC.crop = crops[row]
+        }
+        if segue.identifier == "Segue2AddCrop"{
+            let addCropVC = segue.destination as! AddCropViewController
+            addCropVC.bedId = data.getElement(at: bedsRow).id
+            if isPutRequest{
+                addCropVC.isPutRequest = true
+                addCropVC.idForPutRequest = idForPutRequest
+            }else{
+                addCropVC.isPutRequest = false
+            }
+            
+            
         }
         
     }

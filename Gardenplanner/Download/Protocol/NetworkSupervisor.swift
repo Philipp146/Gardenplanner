@@ -10,5 +10,6 @@ import UIKit
 
 protocol NetworkSupervisor : NSObjectProtocol{
     
-     func handleReceivedData (_ d:AnyObject) -> Void
+    func handleReceivedData (_ d:Data) -> Void
+    func handleReceivedPostData (_ d:Data) -> Void
 }

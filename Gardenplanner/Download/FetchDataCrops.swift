@@ -14,7 +14,11 @@ class FetchDataCrops: NSObject, NetworkSupervisor{
     var notificationStr = ""
     let network = Network()
     
-    func handleReceivedData(_ d: AnyObject) {
+    func handleReceivedData(_ d: Data) {
+        
+    }
+    
+    func handleReceivedPostData(_ d: Data) {
         
     }
     
@@ -25,6 +29,23 @@ class FetchDataCrops: NSObject, NetworkSupervisor{
         network.deleteData(from: url, supervisor: self)
     }
     
+    func postCrop(for user : String, notify : String, bedId : Int, cropJsonString crop : [String : Any]){
+        let url = createUrl(for: user, bed: bedId)
+        notificationStr = notify
+        if JSONSerialization.isValidJSONObject(crop){
+            network.postData(to: url, jsonObject: crop, supervisor: self)
+        }
+    }
+    
+    func putCrop(for user:String, notify : String, bedId : Int, cropId : Int, cropJsonString crop : [String : Any]){
+        var url = createUrl(for: user, bed: bedId)
+        url = urlBuilder.addPath("\(cropId)", url)
+        notificationStr = notify
+        if JSONSerialization.isValidJSONObject(crop){
+            network.putData(to: url, jsonObject: crop, supervisor: self)
+        }
+    }
+   
     fileprivate func createUrl(for user : String, bed bedId : Int) -> String{
         var url = urlBuilder.createBaseUrl()
         url = urlBuilder.addPath("user", url)
