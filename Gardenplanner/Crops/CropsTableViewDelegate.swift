@@ -30,7 +30,7 @@ class CropsTableViewDelegate: NSObject, UITableViewDelegate {
         editAction.backgroundColor = UIColor.orange
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete"){(action,indexPath) -> Void in
             let fetchDataCrops = FetchDataCrops()
-            fetchDataCrops.deleteCrop(for: "maxi@sonntags.net", notify: "CropsLoaded", crop: entry.id, bed: entry.bedId)
+            fetchDataCrops.deleteCrop(for: Constants.userEmail, notify: "CropsLoaded", crop: entry.id, bed: entry.bedId)
             let bedId = self.data.getElement(at: self.bedRow).id
             self.data.deleteCrop(forBed: bedId, atIdx: indexPath.row)
             tableView.reloadData()

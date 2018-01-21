@@ -96,7 +96,7 @@ class CropsViewController: UIViewController, DelegateCrop {
     @objc func handleRefresh(){
         DispatchQueue.main.async {
             let fetch = FetchDataCrops()
-            fetch.fetchAllCrops(for: "maxi@sonntags.net", notify: self.notifyString, bed: self.data.getElement(at: self.bedsRow).id)
+            fetch.fetchAllCrops(for: Constants.userEmail, notify: self.notifyString, bed: self.data.getElement(at: self.bedsRow).id)
             self.tableView.reloadData()
             self.tableView.refreshControl!.endRefreshing()
         }

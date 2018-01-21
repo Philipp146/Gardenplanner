@@ -50,6 +50,10 @@
 		17C5E247200BA6A500CAA441 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E246200BA6A500CAA441 /* Constants.swift */; };
 		17C5E249200BC2C400CAA441 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E248200BC2C400CAA441 /* UserModel.swift */; };
 		17E8AD0820110DA4000EEC1E /* BedsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8AD0720110DA4000EEC1E /* BedsTableViewDelegate.swift */; };
+		369F7E1FDA6B789D4F9C2DB2 /* Pods_Gardenplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E485DF85E2AF3CA56F42084D /* Pods_Gardenplanner.framework */; };
+		402094B5201543E900D32410 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 402094B4201543E800D32410 /* GoogleService-Info.plist */; };
+		C143AFBA3FF4AB90F22B271D /* Pods_GardenplannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668CC2EBFF113F68DEDDF318 /* Pods_GardenplannerUITests.framework */; };
+		CDB13C026BCDC8B878511F57 /* Pods_GardenplannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD5DA6C83172A8DBB28F7F2 /* Pods_GardenplannerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +123,17 @@
 		17C5E246200BA6A500CAA441 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17C5E248200BC2C400CAA441 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		17E8AD0720110DA4000EEC1E /* BedsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedsTableViewDelegate.swift; sourceTree = "<group>"; };
+		1B9ADE044A91922350D5C94A /* Pods-GardenplannerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		32C8C4C83232254E0A2FE9DC /* Pods-GardenplannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		402094B4201543E800D32410 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		402094B62015441D00D32410 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		668CC2EBFF113F68DEDDF318 /* Pods_GardenplannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardenplannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD5DA6C83172A8DBB28F7F2 /* Pods_GardenplannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardenplannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93FACEAD0B71AEDA793F7CC7 /* Pods-Gardenplanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gardenplanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner.debug.xcconfig"; sourceTree = "<group>"; };
+		9A5F6E46DC73CA6B4FD894B1 /* Pods-GardenplannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerTests/Pods-GardenplannerTests.release.xcconfig"; sourceTree = "<group>"; };
+		D95A20ED34381891AB867D26 /* Pods-Gardenplanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gardenplanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner.release.xcconfig"; sourceTree = "<group>"; };
+		E485DF85E2AF3CA56F42084D /* Pods_Gardenplanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gardenplanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40613F20A1931047B29759B /* Pods-GardenplannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerTests/Pods-GardenplannerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369F7E1FDA6B789D4F9C2DB2 /* Pods_Gardenplanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB13C026BCDC8B878511F57 /* Pods_GardenplannerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C143AFBA3FF4AB90F22B271D /* Pods_GardenplannerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +275,13 @@
 		17A62ABB200774B00059977D = {
 			isa = PBXGroup;
 			children = (
+				402094B4201543E800D32410 /* GoogleService-Info.plist */,
 				17A62AC6200774B10059977D /* Gardenplanner */,
 				17A62ADB200774B10059977D /* GardenplannerTests */,
 				17A62AE6200774B10059977D /* GardenplannerUITests */,
 				17A62AC5200774B10059977D /* Products */,
+				76C58291A4AAC1CD151ADD1B /* Pods */,
+				6D6D09681E5959F4BC915CFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,6 +312,7 @@
 				17A62AF5200781A90059977D /* Assets.xcassets */,
 				17A62AD0200774B10059977D /* LaunchScreen.storyboard */,
 				17A62AD3200774B10059977D /* Info.plist */,
+				402094B62015441D00D32410 /* Header.h */,
 			);
 			path = Gardenplanner;
 			sourceTree = "<group>";
@@ -313,6 +335,29 @@
 			path = GardenplannerUITests;
 			sourceTree = "<group>";
 		};
+		6D6D09681E5959F4BC915CFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E485DF85E2AF3CA56F42084D /* Pods_Gardenplanner.framework */,
+				6CD5DA6C83172A8DBB28F7F2 /* Pods_GardenplannerTests.framework */,
+				668CC2EBFF113F68DEDDF318 /* Pods_GardenplannerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76C58291A4AAC1CD151ADD1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93FACEAD0B71AEDA793F7CC7 /* Pods-Gardenplanner.debug.xcconfig */,
+				D95A20ED34381891AB867D26 /* Pods-Gardenplanner.release.xcconfig */,
+				F40613F20A1931047B29759B /* Pods-GardenplannerTests.debug.xcconfig */,
+				9A5F6E46DC73CA6B4FD894B1 /* Pods-GardenplannerTests.release.xcconfig */,
+				32C8C4C83232254E0A2FE9DC /* Pods-GardenplannerUITests.debug.xcconfig */,
+				1B9ADE044A91922350D5C94A /* Pods-GardenplannerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,9 +365,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A62AEC200774B10059977D /* Build configuration list for PBXNativeTarget "Gardenplanner" */;
 			buildPhases = (
+				9EE9523956AAF30A60FEA9DD /* [CP] Check Pods Manifest.lock */,
 				17A62AC0200774B10059977D /* Sources */,
 				17A62AC1200774B10059977D /* Frameworks */,
 				17A62AC2200774B10059977D /* Resources */,
+				BD268BD3A752523E80D5F015 /* [CP] Embed Pods Frameworks */,
+				E3445FB4AAB04456B85F1DD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,9 +385,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A62AEF200774B10059977D /* Build configuration list for PBXNativeTarget "GardenplannerTests" */;
 			buildPhases = (
+				6B05496D1850BFDDCC54DD45 /* [CP] Check Pods Manifest.lock */,
 				17A62AD4200774B10059977D /* Sources */,
 				17A62AD5200774B10059977D /* Frameworks */,
 				17A62AD6200774B10059977D /* Resources */,
+				C43C6121732FF2E58BFAF9D9 /* [CP] Embed Pods Frameworks */,
+				F31C781B7585BC28582614CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,9 +406,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A62AF2200774B10059977D /* Build configuration list for PBXNativeTarget "GardenplannerUITests" */;
 			buildPhases = (
+				C6CCA242806973561C7E6C17 /* [CP] Check Pods Manifest.lock */,
 				17A62ADF200774B10059977D /* Sources */,
 				17A62AE0200774B10059977D /* Frameworks */,
 				17A62AE1200774B10059977D /* Resources */,
+				680D5CAC34DB13E6ABD3378E /* [CP] Embed Pods Frameworks */,
+				8E5A8B924AE0790455E05DC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,6 +476,7 @@
 			files = (
 				17A62AD2200774B10059977D /* LaunchScreen.storyboard in Resources */,
 				17A62AF6200781A90059977D /* Assets.xcassets in Resources */,
+				402094B5201543E900D32410 /* GoogleService-Info.plist in Resources */,
 				17A62ACD200774B10059977D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +496,163 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		680D5CAC34DB13E6ABD3378E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B05496D1850BFDDCC54DD45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GardenplannerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E5A8B924AE0790455E05DC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EE9523956AAF30A60FEA9DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gardenplanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD268BD3A752523E80D5F015 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C43C6121732FF2E58BFAF9D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GardenplannerTests/Pods-GardenplannerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6CCA242806973561C7E6C17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GardenplannerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3445FB4AAB04456B85F1DD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F31C781B7585BC28582614CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GardenplannerTests/Pods-GardenplannerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17A62AC0200774B10059977D /* Sources */ = {
@@ -648,6 +860,7 @@
 		};
 		17A62AED200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93FACEAD0B71AEDA793F7CC7 /* Pods-Gardenplanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -657,6 +870,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philipp.Gardenplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Gardenplanner/Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -664,6 +878,7 @@
 		};
 		17A62AEE200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D95A20ED34381891AB867D26 /* Pods-Gardenplanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -673,6 +888,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philipp.Gardenplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Gardenplanner/Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -680,6 +896,7 @@
 		};
 		17A62AF0200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F40613F20A1931047B29759B /* Pods-GardenplannerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -697,6 +914,7 @@
 		};
 		17A62AF1200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5F6E46DC73CA6B4FD894B1 /* Pods-GardenplannerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -714,6 +932,7 @@
 		};
 		17A62AF3200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32C8C4C83232254E0A2FE9DC /* Pods-GardenplannerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -730,6 +949,7 @@
 		};
 		17A62AF4200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B9ADE044A91922350D5C94A /* Pods-GardenplannerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

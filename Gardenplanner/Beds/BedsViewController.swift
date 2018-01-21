@@ -32,15 +32,25 @@ class BedsViewController: UIViewController, DelegateAddBed{
         delegate.vc = self
         tableView.delegate = delegate
         let fetch = FetchDataBeds()
-        fetch.fetchAllBeds(for: "maxi@sonntags.net", notify: notifyString)
+        fetch.fetchAllBeds(for: Constants.userEmail, notify: notifyString)
         let refreshCtrl = UIRefreshControl()
         refreshCtrl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         tableView.refreshControl = refreshCtrl
         
         nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(handleNotification), name: NSNotification.Name(notifyString), object: nil)
+        
+        let leftItem = UIBarButtonItem(title: "Ausloggen", style: .done, target: self, action: #selector(goBack))
+        self.navigationItem.leftBarButtonItem = leftItem
         // Do any additional setup after loading the view.
     }
+   
+    @objc func goBack(){
+        print("Go back called")
+        performSegue(withIdentifier: "UnwindToLogin", sender: self)
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,8 +69,9 @@ class BedsViewController: UIViewController, DelegateAddBed{
     
     @objc func handleRefresh(){
         DispatchQueue.main.async {
+            BedsModel().clear()
             let fetch = FetchDataBeds()
-            fetch.fetchAllBeds(for: "maxi@sonntags.net", notify: self.notifyString)
+            fetch.fetchAllBeds(for: Constants.userEmail, notify: self.notifyString)
             self.tableView.reloadData()
             self.tableView.refreshControl!.endRefreshing()
         }

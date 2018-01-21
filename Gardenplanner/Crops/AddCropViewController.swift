@@ -76,9 +76,9 @@ class AddCropViewController: UIViewController, PostRequestCallback {
         fetchData.callbackReceiver = self
         
         if isPutRequest{
-            fetchData.putCrop(for: "maxi@sonntags.net", notify: "CropsLoaded", bedId: bedId, cropId: idForPutRequest, cropJsonString: crop.createJsonObject(crop: crop))
+            fetchData.putCrop(for: Constants.userEmail, notify: "CropsLoaded", bedId: bedId, cropId: idForPutRequest, cropJsonString: crop.createJsonObject(crop: crop))
         }else{
-            fetchData.postCrop(for: "maxi@sonntags.net", notify: "CropsLoaded", bedId: bedId, cropJsonString: crop.createJsonObject(crop: crop))
+            fetchData.postCrop(for: Constants.userEmail, notify: "CropsLoaded", bedId: bedId, cropJsonString: crop.createJsonObject(crop: crop))
         }
         
         

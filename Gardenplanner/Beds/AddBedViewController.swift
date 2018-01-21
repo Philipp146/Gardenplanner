@@ -68,9 +68,9 @@ class AddBedViewController: UIViewController, PostRequestCallback{
         let location = LocationsStruct(zip: zip, city: city, country: country, indoor: indoor.selectedSegmentIndex==1)
         let bed = BedsStruct(name: name, location: location)
         if isPutRequest{
-            fetchDataBeds.putBed(for: "maxi@sonntags.net", notify: "BedsLoaded", bed: idForPutRequest, bedJsonString: bed.createJSONObject(bed: bed))
+            fetchDataBeds.putBed(for: Constants.userEmail, notify: "BedsLoaded", bed: idForPutRequest, bedJsonString: bed.createJSONObject(bed: bed))
         }else{
-            fetchDataBeds.postBed(for: "maxi@sonntags.net", notify: "BedsLoaded", bedJsonString: bed.createJSONObject(bed: bed))
+            fetchDataBeds.postBed(for: Constants.userEmail, notify: "BedsLoaded", bedJsonString: bed.createJSONObject(bed: bed))
         }
         
     }
