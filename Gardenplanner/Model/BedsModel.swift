@@ -49,4 +49,45 @@ class BedsModel: NSObject {
         }
         return "No name set"
     }
+    
+    func getCropById(forBed bedId : Int,for id: Int) -> CropsStruct?{
+        if let bed = model.getBedById(for: bedId){
+            for i in bed.crops{
+                if i.id == id{
+                    return i
+                }
+            }
+        }
+        
+        return nil
+    }
+    
+    func addCrop(forBed bedId:Int, crop:CropsStruct){
+        model.getBedById(for: bedId)?.addCrop(crop: crop)
+    }
+    
+    func deleteCrop(forBed bedId:Int, atIdx:Int){
+        model.getBedById(for: bedId)?.crops.remove(at: atIdx)
+    }
+    
+    func deleteAllCrops(forBed bedId : Int){
+        model.getBedById(for: bedId)?.crops.removeAll()
+    }
+    
+    func deleteCropById(forBed bedId:Int, forCrop cropId:Int){
+        for i in 0..<(model.getBedById(for: bedId)?.crops)!.count{
+            if model.getBedById(for: bedId)?.crops[i].id == cropId{
+                model.getBedById(for: bedId)?.crops.remove(at: i)
+                break
+            }
+        }
+    }
+    func deleteBedById(id bedId:Int){
+        for i in 0 ..< model.beds.count {
+            if model.beds[i].id == bedId{
+                model.beds.remove(at: i)
+                break
+            }
+        }
+    }
 }

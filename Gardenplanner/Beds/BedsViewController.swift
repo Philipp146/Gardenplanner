@@ -84,6 +84,14 @@ class BedsViewController: UIViewController, DelegateAddBed{
                 }
                 addBedVC.isPutRequest = true
                 addBedVC.idForPutRequest = bed.id
+                openWithPut = false
+            }else{
+                addBedVC.name = ""
+                addBedVC.city = ""
+                addBedVC.country = ""
+                addBedVC.zip = ""
+                addBedVC.indoorSegment = 0
+                addBedVC.isPutRequest = false
             }
         }
         if segue.identifier == "Segue2Crops"{
@@ -102,3 +110,5 @@ class BedsViewController: UIViewController, DelegateAddBed{
 protocol DelegateAddBed{
     func backFromAddBed(_ otherVC: AddBedViewController)
 }
+
+

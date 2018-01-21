@@ -22,7 +22,7 @@ struct CropsStruct {
 }
 
 extension CropsStruct {
-    init?(withJsonForName: [String : Any]) {
+    init?(withJsonForName: [String : Any], bedId : Int) {
         guard let id = withJsonForName["id"] as? Int,
             let name = withJsonForName["name"] as? String,
             let description = withJsonForName["description"] as? String,
@@ -34,7 +34,7 @@ extension CropsStruct {
             return nil
         }
         self.id = id
-        self.bedId = 0 //Muss noch ausgelesen werden
+        self.bedId = bedId
         self.name = name
         self.description = description
         self.sowDate = sowDate

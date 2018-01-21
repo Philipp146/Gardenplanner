@@ -13,6 +13,7 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
     var notificationStr = ""
     var network = Network()
     let urlBuilder = UrlBuilder()
+    var callbachReceiver : PostRequestCallback!
     
     func fetchAllBeds(for user: String, notify : String){
         let url = createUrl(for: user)
@@ -75,6 +76,7 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
     }
     
     func handleReceivedPostData(_ d: Data) {
+        
         let nc = NotificationCenter.default
         let beds = BedsModel()
         guard let json = try? JSONSerialization.jsonObject(with: d, options: []) as? [String : Any]
@@ -82,7 +84,14 @@ class FetchDataBeds : NSObject, NetworkSupervisor{
                 print("Data was incorrect")
                 return
         }
-        beds.add(bed: BedsStruct(withJsonForName: json!)!)
+        let newBed = BedsStruct(withJsonForName: json!)
+        
+        beds.deleteBedById(id: newBed!.id)
+        
+        
+        beds.add(bed: newBed!)
+        callbachReceiver.notifyPostDone()
+
         nc.post(name: NSNotification.Name(notificationStr), object: nil)
     }
         

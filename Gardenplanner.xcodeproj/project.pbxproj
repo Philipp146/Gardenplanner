@@ -10,6 +10,7 @@
 		170F5AF220109EA000A74B81 /* IPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F5AF120109EA000A74B81 /* IPViewController.swift */; };
 		1710424720139C0F00526F9B /* AddCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710424620139C0F00526F9B /* AddCropViewController.swift */; };
 		171042492013A84B00526F9B /* CropsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171042482013A84B00526F9B /* CropsTableViewDelegate.swift */; };
+		1710424C2014E91900526F9B /* LoadingIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710424B2014E91900526F9B /* LoadingIndicatorController.swift */; };
 		1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0BE20079C640066ABBF /* BedsViewController.swift */; };
 		1728D0C120079C750066ABBF /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C020079C750066ABBF /* RecipesViewController.swift */; };
 		1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C220079C7E0066ABBF /* WeatherViewController.swift */; };
@@ -72,6 +73,7 @@
 		170F5AF120109EA000A74B81 /* IPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPViewController.swift; sourceTree = "<group>"; };
 		1710424620139C0F00526F9B /* AddCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCropViewController.swift; sourceTree = "<group>"; };
 		171042482013A84B00526F9B /* CropsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsTableViewDelegate.swift; sourceTree = "<group>"; };
+		1710424B2014E91900526F9B /* LoadingIndicatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorController.swift; sourceTree = "<group>"; };
 		1728D0BE20079C640066ABBF /* BedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedsViewController.swift; sourceTree = "<group>"; };
 		1728D0C020079C750066ABBF /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		1728D0C220079C7E0066ABBF /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				1728D0DC2007A4CC0066ABBF /* FetchDataBeds.swift */,
 				17C5E240200A981C00CAA441 /* FetchDataCrops.swift */,
 				17C5E242200B85C900CAA441 /* UrlBuilder.swift */,
+				1710424B2014E91900526F9B /* LoadingIndicatorController.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				1728D0C520079C8B0066ABBF /* CropsViewController.swift in Sources */,
 				1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */,
 				1728D0FD2008D5AD0066ABBF /* CropsModel.swift in Sources */,
+				1710424C2014E91900526F9B /* LoadingIndicatorController.swift in Sources */,
 				1728D0F72008CB230066ABBF /* UsersStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,6 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3C9VJFZS7C;
 				INFOPLIST_FILE = Gardenplanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philipp.Gardenplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -664,6 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3C9VJFZS7C;
 				INFOPLIST_FILE = Gardenplanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philipp.Gardenplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
