@@ -61,7 +61,7 @@ class IPViewController: UIViewController, GIDSignInUIDelegate {
                     notification.userInfo as! Dictionary<String,String>
                 print(userInfo["statusText"]!)
                 //Sleep weil sonst versucht wird den Tab View Ctrl über den Sign in View zu legen
-                Thread.sleep(forTimeInterval: 2)
+                //Thread.sleep(forTimeInterval: 1)
                 performSegue(withIdentifier: "Segue2TabVC", sender: nil)
                 
             }

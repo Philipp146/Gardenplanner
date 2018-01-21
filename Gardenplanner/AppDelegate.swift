@@ -44,7 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         request.httpMethod = "POST"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let _ = data, error == nil else {                                                 // check for fundamental networking error
+            guard let _ = data, error == nil else {
+                // check for fundamental networking error
                 print("error=\(String(describing: error))")
                 return
             }
