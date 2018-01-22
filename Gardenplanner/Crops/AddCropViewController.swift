@@ -12,6 +12,8 @@ class AddCropViewController: UIViewController, PostRequestCallback {
     
     
 
+    
+
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var sowDateTextfield: UITextField!
@@ -19,6 +21,8 @@ class AddCropViewController: UIViewController, PostRequestCallback {
     @IBOutlet weak var lastPouredTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var maturingTimeTextField: UITextField!
+    let datePickerSowDate = UIDatePicker()
+    let datePickerLastPoured = UIDatePicker()
     
     //var delegate : AddCropDelegate!
     var callbackReceiver : PostRequestCallback!
@@ -44,7 +48,18 @@ class AddCropViewController: UIViewController, PostRequestCallback {
         sowDateTextfield.text = sowDate
         waterIntervalTextField.text = waterInterval
         lastPouredTextField.text = lastPoured
+        datePickerLastPoured.minimumDate = Date()
+        datePickerLastPoured.datePickerMode = UIDatePickerMode.dateAndTime
+        datePickerLastPoured.addTarget(self, action: #selector(overtakeLastPoured(_:)), for: UIControlEvents.valueChanged)
+        lastPouredTextField.returnKeyType = UIReturnKeyType.done
+        lastPouredTextField.inputView = datePickerLastPoured
         maturingTimeTextField.text = maturingTime
+        datePickerSowDate.maximumDate = Date()
+        datePickerSowDate.datePickerMode = UIDatePickerMode.date
+        datePickerSowDate.addTarget(self, action: #selector(overtakeSowDate(_:)), for: UIControlEvents.valueChanged)
+        sowDateTextfield.returnKeyType = UIReturnKeyType.done
+        sowDateTextfield.inputView = datePickerSowDate
+        
         
         messageLabel.textColor = UIColor.red
         messageLabel.text = ""
@@ -54,6 +69,18 @@ class AddCropViewController: UIViewController, PostRequestCallback {
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func overtakeSowDate(_ sender: Any){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        sowDateTextfield.text = formatter.string(from: datePickerSowDate.date)
+    }
+    
+    @objc func overtakeLastPoured(_ sender: Any){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd hh:mm"
+        lastPouredTextField.text = formatter.string(from: datePickerLastPoured.date)
     }
 
     override func didReceiveMemoryWarning() {

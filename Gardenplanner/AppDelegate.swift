@@ -58,7 +58,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 print("response = \(String(describing: response))")
             }
             //User created -> show next screen
-            NotificationCenter.default.post(name: NSNotification.Name("ToogleScreen"), object: nil, userInfo: ["statusText": "Signed in user:\n\(fullName)"])
+            DispatchQueue.main.async(execute: {
+                NotificationCenter.default.post(name: NSNotification.Name("ToogleScreen"), object: nil, userInfo: ["statusText": "Signed in user:\n\(fullName)"])
+            })
+            
             
         }
         task.resume()

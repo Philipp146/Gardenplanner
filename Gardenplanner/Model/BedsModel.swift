@@ -24,6 +24,10 @@ class BedsModel: NSObject {
         model.beds = beds
     }
     
+    func getBeds() -> [BedsStruct] {
+        return model.beds
+    }
+    
     func getElement(at position : Int) -> BedsStruct{
         return model.beds[position]
     }

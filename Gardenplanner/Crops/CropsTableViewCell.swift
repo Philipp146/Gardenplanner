@@ -12,6 +12,8 @@ class CropsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cropsImage: UIImageView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet var wateringCan: UIImageView!
+    @IBOutlet var widthConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()

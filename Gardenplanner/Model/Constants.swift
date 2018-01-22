@@ -10,7 +10,7 @@ import UIKit
 
 class Constants: NSObject {
     
-    public static var ip = "192.168.0.70"
+    public static var ip = "192.168.184.35"
     public static var userEmail = ""
     public static var userToken = ""
 

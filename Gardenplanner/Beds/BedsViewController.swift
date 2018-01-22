@@ -10,9 +10,12 @@ import UIKit
 
 class BedsViewController: UIViewController, DelegateAddBed{
 
-    @IBOutlet weak var searchBar: UISearchBar!
+
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
     
+    
+    var searchController : UISearchController!
     var dataSource : BedsTableViewDataSource!
     var delegate : BedsTableViewDelegate!
     let notifyString = "BedsLoaded"
@@ -27,15 +30,34 @@ class BedsViewController: UIViewController, DelegateAddBed{
         super.viewDidLoad()
         data = BedsModel()
         dataSource = BedsTableViewDataSource()
+        dataSource.viewController = self
         tableView.dataSource = dataSource
         delegate = BedsTableViewDelegate()
         delegate.vc = self
         tableView.delegate = delegate
+        searchController = UISearchController(searchResultsController: self)
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40))
+        
         let fetch = FetchDataBeds()
         fetch.fetchAllBeds(for: Constants.userEmail, notify: notifyString)
         let refreshCtrl = UIRefreshControl()
         refreshCtrl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         tableView.refreshControl = refreshCtrl
+        
+        searchController.searchResultsUpdater = dataSource as UISearchResultsUpdating
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+        
+        searchController.searchBar.placeholder = "Search Beds"
+        if #available(iOS 11.0, *) {
+            print("set search controller")
+            self.navigationItem.searchController = searchController
+        } else {
+            tableView.tableHeaderView = searchController.searchBar
+            
+        }
+        tableView.tableHeaderView = searchController.searchBar
+        definesPresentationContext = true
         
         nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(handleNotification), name: NSNotification.Name(notifyString), object: nil)
@@ -78,6 +100,15 @@ class BedsViewController: UIViewController, DelegateAddBed{
         
     }
     
+    @objc func toWeather(sender:AnyObject){
+        var button = sender as! UIButton
+        var row = button.tag
+        DispatchQueue.main.async(execute: {
+             self.performSegue(withIdentifier: "Beds2Weather", sender: row)
+        })
+       
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Segue2AddBed"{
             let addBedVC = segue.destination as! AddBedViewController
@@ -111,6 +142,14 @@ class BedsViewController: UIViewController, DelegateAddBed{
             print("Beds: \(row)")
             cropsVC.bedsRow = row
         }
+        
+        if segue.identifier == "Beds2Weather" {
+            let weatherVC = segue.destination as! WeatherGraphViewController
+            let row = sender as! Int
+            let bed = BedsModel().getElement(at: row)
+            weatherVC.bed = bed
+            
+        }
     }
 
     @IBAction func add(_ sender: Any) {
@@ -121,5 +160,7 @@ class BedsViewController: UIViewController, DelegateAddBed{
 protocol DelegateAddBed{
     func backFromAddBed(_ otherVC: AddBedViewController)
 }
+
+
 
 

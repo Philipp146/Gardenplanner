@@ -52,6 +52,9 @@
 		17E8AD0820110DA4000EEC1E /* BedsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8AD0720110DA4000EEC1E /* BedsTableViewDelegate.swift */; };
 		369F7E1FDA6B789D4F9C2DB2 /* Pods_Gardenplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E485DF85E2AF3CA56F42084D /* Pods_Gardenplanner.framework */; };
 		402094B5201543E900D32410 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 402094B4201543E800D32410 /* GoogleService-Info.plist */; };
+		402094B92015576D00D32410 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402094B82015576D00D32410 /* LineGraph.swift */; };
+		402094BB2015578700D32410 /* LineGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402094BA2015578700D32410 /* LineGraphDataSource.swift */; };
+		402094C12015595800D32410 /* WeatherGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402094C02015595800D32410 /* WeatherGraphViewController.swift */; };
 		C143AFBA3FF4AB90F22B271D /* Pods_GardenplannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668CC2EBFF113F68DEDDF318 /* Pods_GardenplannerUITests.framework */; };
 		CDB13C026BCDC8B878511F57 /* Pods_GardenplannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD5DA6C83172A8DBB28F7F2 /* Pods_GardenplannerTests.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +130,9 @@
 		32C8C4C83232254E0A2FE9DC /* Pods-GardenplannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		402094B4201543E800D32410 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		402094B62015441D00D32410 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		402094B82015576D00D32410 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		402094BA2015578700D32410 /* LineGraphDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphDataSource.swift; sourceTree = "<group>"; };
+		402094C02015595800D32410 /* WeatherGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGraphViewController.swift; sourceTree = "<group>"; };
 		668CC2EBFF113F68DEDDF318 /* Pods_GardenplannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardenplannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD5DA6C83172A8DBB28F7F2 /* Pods_GardenplannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardenplannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FACEAD0B71AEDA793F7CC7 /* Pods-Gardenplanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gardenplanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +304,8 @@
 		17A62AC6200774B10059977D /* Gardenplanner */ = {
 			isa = PBXGroup;
 			children = (
+				402094BF2015594A00D32410 /* WeatherGraph */,
+				402094B72015574600D32410 /* Views */,
 				170F5AF020109E7F00A74B81 /* Start Screens */,
 				1728D0E12007B0520066ABBF /* Model */,
 				1728D0D82007A4000066ABBF /* Download */,
@@ -333,6 +341,23 @@
 				17A62AE9200774B10059977D /* Info.plist */,
 			);
 			path = GardenplannerUITests;
+			sourceTree = "<group>";
+		};
+		402094B72015574600D32410 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				402094B82015576D00D32410 /* LineGraph.swift */,
+				402094BA2015578700D32410 /* LineGraphDataSource.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		402094BF2015594A00D32410 /* WeatherGraph */ = {
+			isa = PBXGroup;
+			children = (
+				402094C02015595800D32410 /* WeatherGraphViewController.swift */,
+			);
+			path = WeatherGraph;
 			sourceTree = "<group>";
 		};
 		6D6D09681E5959F4BC915CFC /* Frameworks */ = {
@@ -666,6 +691,7 @@
 				1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */,
 				1728D0F92008CB4B0066ABBF /* LocationsModel.swift in Sources */,
 				17C5E23D200A871F00CAA441 /* CropViewController.swift in Sources */,
+				402094B92015576D00D32410 /* LineGraph.swift in Sources */,
 				17C5E247200BA6A500CAA441 /* Constants.swift in Sources */,
 				1728D0DA2007A4150066ABBF /* Network.swift in Sources */,
 				1728D0D32007A1660066ABBF /* BedsTableViewCell.swift in Sources */,
@@ -685,12 +711,14 @@
 				1710424720139C0F00526F9B /* AddCropViewController.swift in Sources */,
 				1728D0D72007A17D0066ABBF /* RecipesTableViewCell.swift in Sources */,
 				1728D0E32007B06B0066ABBF /* BedsModel.swift in Sources */,
+				402094C12015595800D32410 /* WeatherGraphViewController.swift in Sources */,
 				17E8AD0820110DA4000EEC1E /* BedsTableViewDelegate.swift in Sources */,
 				1728D0F52008CB130066ABBF /* LocationsStruct.swift in Sources */,
 				17A62AC8200774B10059977D /* AppDelegate.swift in Sources */,
 				1728D0D52007A1720066ABBF /* CropsTableViewCell.swift in Sources */,
 				1728D0EC2007B1B90066ABBF /* BedsStruct.swift in Sources */,
 				17C5E241200A981C00CAA441 /* FetchDataCrops.swift in Sources */,
+				402094BB2015578700D32410 /* LineGraphDataSource.swift in Sources */,
 				1728D0CD2007A0A40066ABBF /* BedsTableViewDataSource.swift in Sources */,
 				1728D0C520079C8B0066ABBF /* CropsViewController.swift in Sources */,
 				1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */,
