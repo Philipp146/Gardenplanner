@@ -9,6 +9,10 @@
 import UIKit
 
 class FetchDataCrops: NSObject, NetworkSupervisor{
+    func handleReceivedDataWithPos(_ d: Data, _ pos: Int) {
+        //unused
+    }
+    
     
     let urlBuilder = UrlBuilder()
     var notificationStr = ""

@@ -68,7 +68,7 @@ class Network{
         request.addValue("Test123", forHTTPHeaderField: "token")
         return request
     }
-
+   
     fileprivate func makeTask(with request : URLRequest, handleReceivedData isRequestType : IsRequestType, _ supervisor: NetworkSupervisor){
         let task = URLSession.shared.dataTask(with: request){
             data,response,error in
@@ -94,9 +94,28 @@ class Network{
         }
         task.resume()
     }
-    
-    
-    
+    func makeTask(with request : URLRequest, supervisor: NetworkSupervisor, pos: Int){
+        let task = URLSession.shared.dataTask(with: request){
+            data,response,error in
+            // check for fundamental networking error
+            guard let data = data, error == nil else {
+                print("error=\(String(describing: error))")
+                return
+            }
+            // check for http errors
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(String(describing: response))")
+            }
+            
+            
+            supervisor.handleReceivedDataWithPos(data, pos)
+           
+            let responseString = String(data: data, encoding: .utf8)
+        }
+        task.resume()
+    }
+        
     func cancel () -> Void
     {
         task.cancel()

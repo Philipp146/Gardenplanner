@@ -24,8 +24,12 @@ class RecipeTableViewDataSource: NSObject, UITableViewDataSource {
         let index = indexPath.row
         var entry = data.getElement(at: index)
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipesCell") as! RecipesTableViewCell
+        cell.name.text = entry.title
+        cell.publisher.text = String(entry.socialRank)
+        if entry.pictures != nil{
+            cell.recipeImage?.image = entry.pictures
+        }
         return cell
-    }
-    
+    }    
 
 }

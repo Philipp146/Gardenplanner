@@ -9,6 +9,10 @@
 import UIKit
 
 class FetchDataBeds : NSObject, NetworkSupervisor{
+    func handleReceivedDataWithPos(_ d: Data, _ pos: Int) {
+        //unused
+    }
+    
         
     var notificationStr = ""
     var network = Network()

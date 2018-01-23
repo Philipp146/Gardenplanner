@@ -39,5 +39,13 @@ class CropViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func switchToRecipe(_ sender: UIButton) {
+        performSegue(withIdentifier: "Segue2Recipes", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Segue2Recipes"{
+            let recipeVC = segue.destination as! RecipesViewController
+            recipeVC.crop = crop
+        }
+    }
 }

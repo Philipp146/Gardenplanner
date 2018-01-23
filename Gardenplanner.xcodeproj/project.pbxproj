@@ -50,6 +50,12 @@
 		17C5E249200BC2C400CAA441 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E248200BC2C400CAA441 /* UserModel.swift */; };
 		D42404F82010BC7C00480804 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42404F72010BC7C00480804 /* LoginViewController.swift */; };
 		D42404FA2010D9D800480804 /* FetchOpenID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42404F92010D9D800480804 /* FetchOpenID.swift */; };
+		D4612FBC20155F3700D4AB6B /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4612FBB20155F3700D4AB6B /* IngredientsViewController.swift */; };
+		D4612FBE2015648200D4AB6B /* FetchIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4612FBD2015648100D4AB6B /* FetchIngredients.swift */; };
+		D4D17B572014D2C300AD2EA7 /* BedsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D17B562014D2C300AD2EA7 /* BedsTableViewDelegate.swift */; };
+		D4D17B592014D8B200AD2EA7 /* FetchDataRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D17B582014D8B200AD2EA7 /* FetchDataRecipe.swift */; };
+		D4D17B5B2014E76100AD2EA7 /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D17B5A2014E76100AD2EA7 /* SearchBarDelegate.swift */; };
+		D4D17B5D20150B3500AD2EA7 /* FetchPictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D17B5C20150B3500AD2EA7 /* FetchPictures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +125,12 @@
 		17C5E248200BC2C400CAA441 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D42404F72010BC7C00480804 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D42404F92010D9D800480804 /* FetchOpenID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOpenID.swift; sourceTree = "<group>"; };
+		D4612FBB20155F3700D4AB6B /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		D4612FBD2015648100D4AB6B /* FetchIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchIngredients.swift; sourceTree = "<group>"; };
+		D4D17B562014D2C300AD2EA7 /* BedsTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BedsTableViewDelegate.swift; sourceTree = "<group>"; };
+		D4D17B582014D8B200AD2EA7 /* FetchDataRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDataRecipe.swift; sourceTree = "<group>"; };
+		D4D17B5A2014E76100AD2EA7 /* SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarDelegate.swift; sourceTree = "<group>"; };
+		D4D17B5C20150B3500AD2EA7 /* FetchPictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPictures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,9 +177,9 @@
 		1728D0BA20079BB60066ABBF /* Beds */ = {
 			isa = PBXGroup;
 			children = (
+				D4D17B562014D2C300AD2EA7 /* BedsTableViewDelegate.swift */,
 				1728D0BE20079C640066ABBF /* BedsViewController.swift */,
 				1728D0CC2007A0A40066ABBF /* BedsTableViewDataSource.swift */,
-				17E8AD0720110DA4000EEC1E /* BedsTableViewDelegate.swift */,
 				1728D0D22007A1660066ABBF /* BedsTableViewCell.swift */,
 				17C5E23E200A932D00CAA441 /* AddBedViewController.swift */,
 			);
@@ -180,6 +192,8 @@
 				1728D0C020079C750066ABBF /* RecipesViewController.swift */,
 				1728D0CE2007A1170066ABBF /* RecipeTableViewDataSource.swift */,
 				1728D0D62007A17D0066ABBF /* RecipesTableViewCell.swift */,
+				D4D17B5A2014E76100AD2EA7 /* SearchBarDelegate.swift */,
+				D4612FBB20155F3700D4AB6B /* IngredientsViewController.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -213,6 +227,9 @@
 				17C5E240200A981C00CAA441 /* FetchDataCrops.swift */,
 				17C5E242200B85C900CAA441 /* UrlBuilder.swift */,
 				D42404F92010D9D800480804 /* FetchOpenID.swift */,
+				D4D17B582014D8B200AD2EA7 /* FetchDataRecipe.swift */,
+				D4D17B5C20150B3500AD2EA7 /* FetchPictures.swift */,
+				D4612FBD2015648100D4AB6B /* FetchIngredients.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -463,19 +480,21 @@
 				1728D0CF2007A1170066ABBF /* RecipeTableViewDataSource.swift in Sources */,
 				17A62ACA200774B10059977D /* TabViewController.swift in Sources */,
 				1728D0E72007B0830066ABBF /* WeatherModel.swift in Sources */,
+				D4612FBC20155F3700D4AB6B /* IngredientsViewController.swift in Sources */,
 				17C5E243200B85C900CAA441 /* UrlBuilder.swift in Sources */,
 				1728D0D12007A1390066ABBF /* CropsTableViewDataSource.swift in Sources */,
 				1728D0EE2007B58C0066ABBF /* RecipesStruct.swift in Sources */,
+				D4612FBE2015648200D4AB6B /* FetchIngredients.swift in Sources */,
 				1728D0F02007B5980066ABBF /* CropsStruct.swift in Sources */,
 				171042492013A84B00526F9B /* CropsTableViewDelegate.swift in Sources */,
 				1728D0F22007B5A30066ABBF /* WeatherStruct.swift in Sources */,
 				170F5AF220109EA000A74B81 /* IPViewController.swift in Sources */,
 				17C5E23F200A932D00CAA441 /* AddBedViewController.swift in Sources */,
+				D4D17B5B2014E76100AD2EA7 /* SearchBarDelegate.swift in Sources */,
 				1728D0DD2007A4CC0066ABBF /* FetchDataBeds.swift in Sources */,
 				1710424720139C0F00526F9B /* AddCropViewController.swift in Sources */,
 				1728D0D72007A17D0066ABBF /* RecipesTableViewCell.swift in Sources */,
 				1728D0E32007B06B0066ABBF /* BedsModel.swift in Sources */,
-				17E8AD0820110DA4000EEC1E /* BedsTableViewDelegate.swift in Sources */,
 				1728D0F52008CB130066ABBF /* LocationsStruct.swift in Sources */,
 				17A62AC8200774B10059977D /* AppDelegate.swift in Sources */,
 				1728D0D52007A1720066ABBF /* CropsTableViewCell.swift in Sources */,
@@ -485,7 +504,10 @@
 				1728D0CD2007A0A40066ABBF /* BedsTableViewDataSource.swift in Sources */,
 				1728D0C520079C8B0066ABBF /* CropsViewController.swift in Sources */,
 				1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */,
+				D4D17B592014D8B200AD2EA7 /* FetchDataRecipe.swift in Sources */,
 				1728D0FD2008D5AD0066ABBF /* CropsModel.swift in Sources */,
+				D4D17B5D20150B3500AD2EA7 /* FetchPictures.swift in Sources */,
+				D4D17B572014D2C300AD2EA7 /* BedsTableViewDelegate.swift in Sources */,
 				1728D0F72008CB230066ABBF /* UsersStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

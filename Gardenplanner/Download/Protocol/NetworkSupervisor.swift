@@ -12,4 +12,5 @@ protocol NetworkSupervisor : NSObjectProtocol{
     
     func handleReceivedData (_ d:Data) -> Void
     func handleReceivedPostData (_ d:Data) -> Void
+    func handleReceivedDataWithPos(_ d:Data, _ pos: Int) -> Void
 }
