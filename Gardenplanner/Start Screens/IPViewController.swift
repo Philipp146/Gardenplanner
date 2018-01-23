@@ -12,6 +12,7 @@ class IPViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var ipTextField: UITextField!
     @IBOutlet weak var ipLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     fileprivate var constants : Constants!
     
@@ -19,6 +20,7 @@ class IPViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         constants = Constants()
         GIDSignIn.sharedInstance().uiDelegate = self
+        saveButton.isEnabled = false
         
         //Um Back Button beim Logout zu verbergen, is ja in keinem navigation controller eingebettet (Keine ahnung wie man die bottom bar hided)
         self.navigationItem.setHidesBackButton(true, animated: false)
@@ -40,7 +42,6 @@ class IPViewController: UIViewController, GIDSignInUIDelegate {
     @IBAction func saveIP(_ sender: Any) {
         if ipTextField.hasText{
             Constants.ip = ipTextField.text!
-            
         }else{
             print("i was here")
             ipLabel.textColor = UIColor.red
@@ -76,6 +77,9 @@ class IPViewController: UIViewController, GIDSignInUIDelegate {
         }
     }
     
+    @IBAction func textfieldChanged(_ sender: Any) {
+        saveButton.isEnabled = true
+    }
     deinit {
         NotificationCenter.default.removeObserver(self, name: Notification.Name("ToogleScreen"), object: nil)
     }
