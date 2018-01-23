@@ -73,12 +73,12 @@ class LineGraph: UIView {
         label.textColor = UIColor.white
         label.font = UIFont.boldSystemFont(ofSize: 10)
         label.textAlignment = .right
-        label.text = "\(dataSource.minElement())"
+        label.text = "\(dataSource.minElement())°C"
         label.frame = CGRect(x: bounds.width-margin, y: bounds.height - topBorder - 5, width: 20, height: 10)
         self.addSubview(label)
         
         let maxLabel = UILabel()
-        maxLabel.text = "\(dataSource.maxElement())"
+        maxLabel.text = "\(dataSource.maxElement())°C"
         maxLabel.textColor = UIColor.white
         maxLabel.font = UIFont.boldSystemFont(ofSize: 10)
         maxLabel.textAlignment = .right
@@ -121,6 +121,7 @@ class LineGraph: UIView {
         for i in 1..<dataSource.numberOfEntries(in: self) {
             let nextPoint = CGPoint(x:columnXPoint(i),
                                     y:columnYPoint(dataSource.lineGraph(self, dataForColumn: i)))
+            print("Next point: \(nextPoint)")
             graphPath.addLine(to: nextPoint)
         }
         drawGradient(under: graphPath)
@@ -206,7 +207,7 @@ class LineGraph: UIView {
         print("Point: \(graphPoint)")
         let range = abs(dataSource.maxElement()) + abs(dataSource.minElement())
         var y : CGFloat = CGFloat(graphPoint) / CGFloat(range) * graphHeight
-        y = graphHeight/2 + topBorder - y
+        y = graphHeight + topBorder - y
         return y
     }
 }

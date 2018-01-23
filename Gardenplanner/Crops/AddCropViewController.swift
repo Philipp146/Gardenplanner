@@ -48,7 +48,7 @@ class AddCropViewController: UIViewController, PostRequestCallback {
         sowDateTextfield.text = sowDate
         waterIntervalTextField.text = waterInterval
         lastPouredTextField.text = lastPoured
-        datePickerLastPoured.minimumDate = Date()
+        datePickerLastPoured.maximumDate = Date()
         datePickerLastPoured.datePickerMode = UIDatePickerMode.dateAndTime
         datePickerLastPoured.addTarget(self, action: #selector(overtakeLastPoured(_:)), for: UIControlEvents.valueChanged)
         lastPouredTextField.returnKeyType = UIReturnKeyType.done

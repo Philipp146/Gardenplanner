@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("User signed in")
             Constants.userEmail = user.profile.email
             Constants.userToken = user.userID
-            print("Constants: \(Constants.userEmail)")
+            print("Constants: \(Constants.userEmail) and \(Constants.userToken)")
            
             self.startDataTask(idToken: idToken!, fullName: fullName!)
 
