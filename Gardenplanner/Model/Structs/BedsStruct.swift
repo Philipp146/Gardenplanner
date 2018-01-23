@@ -8,16 +8,18 @@
 
 import UIKit
 
-struct BedsStruct{
+class BedsStruct{
 
     var id : Int
     var owner : String
     var name : String
     var location : LocationsStruct
     var crops: [CropsStruct]
-}
+    
+    func setCrops(vCrops : [CropsStruct]){
+        crops = vCrops
+    }
 
-extension BedsStruct {
     init?(withJsonForName: [String : Any]) {
         guard let id = withJsonForName["id"] as? Int,
             let name = withJsonForName["name"] as? String,
@@ -33,12 +35,12 @@ extension BedsStruct {
         self.location = LocationsStruct(withJsonForName: locationJsonString)!
         var cropsArray : [CropsStruct] = []
         for i in crops{
-            cropsArray.append(CropsStruct(withJsonForName: i)!)
+            cropsArray.append(CropsStruct(withJsonForName: i, bedId : self.id)!)
         }
         self.crops = cropsArray
     }
     
-    init(name name : String, location location : LocationsStruct) {
+    init(name : String, location : LocationsStruct) {
         id = 0
         owner = ""
         self.name = name
@@ -46,10 +48,14 @@ extension BedsStruct {
         self.crops = []
     }
     
-    func createJSONObject(bed bed : BedsStruct) -> [String : Any]{
+    func createJSONObject(bed : BedsStruct) -> [String : Any]{
         var jsonString : [String : Any] = [:]
         jsonString.updateValue(bed.name, forKey: "name")
         jsonString.updateValue(bed.location.createJSONObject(location: location), forKey: "location")
         return jsonString
+    }
+    
+    func addCrop(crop:CropsStruct){
+        self.crops.append(crop)
     }
 }

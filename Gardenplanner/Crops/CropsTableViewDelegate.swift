@@ -23,15 +23,16 @@ class CropsTableViewDelegate: NSObject, UITableViewDelegate {
         let index = indexPath.row
         let entry = data.getElement(at: bedRow).crops[index]
         let editAction = UITableViewRowAction(style: .normal, title: "Edit"){(action,indexPath) -> Void in
-            self.vc.idForPutRequest = index
+            self.vc.idForPutRequest = entry.id
             self.vc.isPutRequest = true
             self.vc.performSegue(withIdentifier: "Segue2AddCrop", sender: nil)
         }
         editAction.backgroundColor = UIColor.orange
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete"){(action,indexPath) -> Void in
             let fetchDataCrops = FetchDataCrops()
-            fetchDataCrops.deleteCrop(for: "maxi@sonntags.net", notify: "CropsLoaded", crop: entry.id, bed: entry.bedId)
-            self.data.remove(at: index)
+            fetchDataCrops.deleteCrop(for: Constants.userEmail, notify: "CropsLoaded", crop: entry.id, bed: entry.bedId)
+            let bedId = self.data.getElement(at: self.bedRow).id
+            self.data.deleteCrop(forBed: bedId, atIdx: indexPath.row)
             tableView.reloadData()
         }
         deleteAction.backgroundColor = UIColor.red
@@ -40,5 +41,9 @@ class CropsTableViewDelegate: NSObject, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         return UITableViewCellEditingStyle.insert
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

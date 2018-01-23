@@ -25,12 +25,33 @@ class CropsTableViewDataSource: NSObject, UITableViewDataSource {
         let entry = data.getElement(at: bedsRow)
         let cell = tableView.dequeueReusableCell(withIdentifier: "CropsCell") as! CropsTableViewCell
         cell.name.text = entry.crops[index].name
+        let crop = entry.crops[index]
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd hh:mm"
+        let date = formatter.date(from: crop.lastPoured)
+        print("Last Poured: \(crop.lastPoured)")
+        print("Date: \(date)")
+        if let date=date{
+            let wateringDate = date.addingTimeInterval(Double(crop.waterInterval)!*24*60*60)
+            print("Watering Date: \(wateringDate)")
+            print("Date: \(Date())")
+            if Date() > wateringDate{
+                cell.widthConstraint.constant = 44
+            }else{
+                cell.widthConstraint.constant = 0
+            }
+        }else{
+            print("Will be hidden")
+            cell.widthConstraint.constant = 0
+            
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
     
 
 }

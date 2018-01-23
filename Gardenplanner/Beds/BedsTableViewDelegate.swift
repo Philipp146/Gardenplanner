@@ -29,7 +29,7 @@ class BedsTableViewDelegate: NSObject, UITableViewDelegate {
         editAction.backgroundColor = UIColor.orange
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete"){(action,indexPath) -> Void in
             let fetchDataBeds = FetchDataBeds()
-            fetchDataBeds.deleteBed(for: "maxi@sonntags.net", notify: "notify", bed: entry.id)
+            fetchDataBeds.deleteBed(for: Constants.userEmail, notify: "notify", bed: entry.id)
             self.data.remove(at: index)
             tableView.reloadData()
         }
@@ -41,5 +41,8 @@ class BedsTableViewDelegate: NSObject, UITableViewDelegate {
         return UITableViewCellEditingStyle.insert
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
 }

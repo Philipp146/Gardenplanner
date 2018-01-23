@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddBedViewController: UIViewController {
+class AddBedViewController: UIViewController, PostRequestCallback{
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
@@ -18,6 +18,7 @@ class AddBedViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     
     var delegate : DelegateAddBed!
+    var loadingIndicator : LoadingIndicatorController!
     
     var name = ""
     var country = ""
@@ -38,6 +39,7 @@ class AddBedViewController: UIViewController {
         zipTextField.text = zip
         cityName.text = city
         indoor.selectedSegmentIndex = indoorSegment
+        loadingIndicator = LoadingIndicatorController(view)
 
         // Do any additional setup after loading the view.
     }
@@ -49,6 +51,7 @@ class AddBedViewController: UIViewController {
     
     @IBAction func saveAndPost(_ sender: Any) {
         let fetchDataBeds = FetchDataBeds()
+        fetchDataBeds.callbachReceiver = self
         guard var zip = zipTextField.text,
             let city = cityName.text,
             let country = countryTextField.text,
@@ -61,12 +64,21 @@ class AddBedViewController: UIViewController {
             messageLabel.text = "You need to fill everything"
             return
         }
+        loadingIndicator.startLoadingIndicator()
         let location = LocationsStruct(zip: zip, city: city, country: country, indoor: indoor.selectedSegmentIndex==1)
         let bed = BedsStruct(name: name, location: location)
         if isPutRequest{
-            fetchDataBeds.putBed(for: "maxi@sonntags.net", notify: "BedsLoaded", bed: idForPutRequest, bedJsonString: bed.createJSONObject(bed: bed))
+            fetchDataBeds.putBed(for: Constants.userEmail, notify: "BedsLoaded", bed: idForPutRequest, bedJsonString: bed.createJSONObject(bed: bed))
         }else{
-            fetchDataBeds.postBed(for: "maxi@sonntags.net", notify: "BedsLoaded", bedJsonString: bed.createJSONObject(bed: bed))
+            fetchDataBeds.postBed(for: Constants.userEmail, notify: "BedsLoaded", bedJsonString: bed.createJSONObject(bed: bed))
+        }
+        
+    }
+    
+    func notifyPostDone() {
+        DispatchQueue.main.async {
+            self.loadingIndicator.stopLoadingIndicator()
+            self.navigationController?.popViewController(animated: true)
         }
         
     }

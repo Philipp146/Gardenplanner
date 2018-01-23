@@ -10,6 +10,7 @@
 		170F5AF220109EA000A74B81 /* IPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F5AF120109EA000A74B81 /* IPViewController.swift */; };
 		1710424720139C0F00526F9B /* AddCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710424620139C0F00526F9B /* AddCropViewController.swift */; };
 		171042492013A84B00526F9B /* CropsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171042482013A84B00526F9B /* CropsTableViewDelegate.swift */; };
+		1710424C2014E91900526F9B /* LoadingIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710424B2014E91900526F9B /* LoadingIndicatorController.swift */; };
 		1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0BE20079C640066ABBF /* BedsViewController.swift */; };
 		1728D0C120079C750066ABBF /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C020079C750066ABBF /* RecipesViewController.swift */; };
 		1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C220079C7E0066ABBF /* WeatherViewController.swift */; };
@@ -79,6 +80,7 @@
 		170F5AF120109EA000A74B81 /* IPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPViewController.swift; sourceTree = "<group>"; };
 		1710424620139C0F00526F9B /* AddCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCropViewController.swift; sourceTree = "<group>"; };
 		171042482013A84B00526F9B /* CropsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsTableViewDelegate.swift; sourceTree = "<group>"; };
+		1710424B2014E91900526F9B /* LoadingIndicatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorController.swift; sourceTree = "<group>"; };
 		1728D0BE20079C640066ABBF /* BedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedsViewController.swift; sourceTree = "<group>"; };
 		1728D0C020079C750066ABBF /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		1728D0C220079C7E0066ABBF /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369F7E1FDA6B789D4F9C2DB2 /* Pods_Gardenplanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB13C026BCDC8B878511F57 /* Pods_GardenplannerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C143AFBA3FF4AB90F22B271D /* Pods_GardenplannerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,10 +279,13 @@
 		17A62ABB200774B00059977D = {
 			isa = PBXGroup;
 			children = (
+				402094B4201543E800D32410 /* GoogleService-Info.plist */,
 				17A62AC6200774B10059977D /* Gardenplanner */,
 				17A62ADB200774B10059977D /* GardenplannerTests */,
 				17A62AE6200774B10059977D /* GardenplannerUITests */,
 				17A62AC5200774B10059977D /* Products */,
+				76C58291A4AAC1CD151ADD1B /* Pods */,
+				6D6D09681E5959F4BC915CFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -294,6 +302,8 @@
 		17A62AC6200774B10059977D /* Gardenplanner */ = {
 			isa = PBXGroup;
 			children = (
+				402094BF2015594A00D32410 /* WeatherGraph */,
+				402094B72015574600D32410 /* Views */,
 				170F5AF020109E7F00A74B81 /* Start Screens */,
 				1728D0E12007B0520066ABBF /* Model */,
 				1728D0D82007A4000066ABBF /* Download */,
@@ -331,6 +341,46 @@
 			path = GardenplannerUITests;
 			sourceTree = "<group>";
 		};
+		402094B72015574600D32410 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				402094B82015576D00D32410 /* LineGraph.swift */,
+				402094BA2015578700D32410 /* LineGraphDataSource.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		402094BF2015594A00D32410 /* WeatherGraph */ = {
+			isa = PBXGroup;
+			children = (
+				402094C02015595800D32410 /* WeatherGraphViewController.swift */,
+			);
+			path = WeatherGraph;
+			sourceTree = "<group>";
+		};
+		6D6D09681E5959F4BC915CFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E485DF85E2AF3CA56F42084D /* Pods_Gardenplanner.framework */,
+				6CD5DA6C83172A8DBB28F7F2 /* Pods_GardenplannerTests.framework */,
+				668CC2EBFF113F68DEDDF318 /* Pods_GardenplannerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76C58291A4AAC1CD151ADD1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93FACEAD0B71AEDA793F7CC7 /* Pods-Gardenplanner.debug.xcconfig */,
+				D95A20ED34381891AB867D26 /* Pods-Gardenplanner.release.xcconfig */,
+				F40613F20A1931047B29759B /* Pods-GardenplannerTests.debug.xcconfig */,
+				9A5F6E46DC73CA6B4FD894B1 /* Pods-GardenplannerTests.release.xcconfig */,
+				32C8C4C83232254E0A2FE9DC /* Pods-GardenplannerUITests.debug.xcconfig */,
+				1B9ADE044A91922350D5C94A /* Pods-GardenplannerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,9 +388,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A62AEC200774B10059977D /* Build configuration list for PBXNativeTarget "Gardenplanner" */;
 			buildPhases = (
+				9EE9523956AAF30A60FEA9DD /* [CP] Check Pods Manifest.lock */,
 				17A62AC0200774B10059977D /* Sources */,
 				17A62AC1200774B10059977D /* Frameworks */,
 				17A62AC2200774B10059977D /* Resources */,
+				BD268BD3A752523E80D5F015 /* [CP] Embed Pods Frameworks */,
+				E3445FB4AAB04456B85F1DD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,9 +408,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A62AEF200774B10059977D /* Build configuration list for PBXNativeTarget "GardenplannerTests" */;
 			buildPhases = (
+				6B05496D1850BFDDCC54DD45 /* [CP] Check Pods Manifest.lock */,
 				17A62AD4200774B10059977D /* Sources */,
 				17A62AD5200774B10059977D /* Frameworks */,
 				17A62AD6200774B10059977D /* Resources */,
+				C43C6121732FF2E58BFAF9D9 /* [CP] Embed Pods Frameworks */,
+				F31C781B7585BC28582614CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,9 +429,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A62AF2200774B10059977D /* Build configuration list for PBXNativeTarget "GardenplannerUITests" */;
 			buildPhases = (
+				C6CCA242806973561C7E6C17 /* [CP] Check Pods Manifest.lock */,
 				17A62ADF200774B10059977D /* Sources */,
 				17A62AE0200774B10059977D /* Frameworks */,
 				17A62AE1200774B10059977D /* Resources */,
+				680D5CAC34DB13E6ABD3378E /* [CP] Embed Pods Frameworks */,
+				8E5A8B924AE0790455E05DC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,6 +499,7 @@
 			files = (
 				17A62AD2200774B10059977D /* LaunchScreen.storyboard in Resources */,
 				17A62AF6200781A90059977D /* Assets.xcassets in Resources */,
+				402094B5201543E900D32410 /* GoogleService-Info.plist in Resources */,
 				17A62ACD200774B10059977D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +520,163 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		680D5CAC34DB13E6ABD3378E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B05496D1850BFDDCC54DD45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GardenplannerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E5A8B924AE0790455E05DC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EE9523956AAF30A60FEA9DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gardenplanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD268BD3A752523E80D5F015 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C43C6121732FF2E58BFAF9D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GardenplannerTests/Pods-GardenplannerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6CCA242806973561C7E6C17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GardenplannerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3445FB4AAB04456B85F1DD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F31C781B7585BC28582614CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GardenplannerTests/Pods-GardenplannerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		17A62AC0200774B10059977D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -473,6 +690,7 @@
 				D42404FA2010D9D800480804 /* FetchOpenID.swift in Sources */,
 				1728D0F92008CB4B0066ABBF /* LocationsModel.swift in Sources */,
 				17C5E23D200A871F00CAA441 /* CropViewController.swift in Sources */,
+				402094B92015576D00D32410 /* LineGraph.swift in Sources */,
 				17C5E247200BA6A500CAA441 /* Constants.swift in Sources */,
 				1728D0DA2007A4150066ABBF /* Network.swift in Sources */,
 				1728D0D32007A1660066ABBF /* BedsTableViewCell.swift in Sources */,
@@ -501,6 +719,7 @@
 				1728D0EC2007B1B90066ABBF /* BedsStruct.swift in Sources */,
 				D42404F82010BC7C00480804 /* LoginViewController.swift in Sources */,
 				17C5E241200A981C00CAA441 /* FetchDataCrops.swift in Sources */,
+				402094BB2015578700D32410 /* LineGraphDataSource.swift in Sources */,
 				1728D0CD2007A0A40066ABBF /* BedsTableViewDataSource.swift in Sources */,
 				1728D0C520079C8B0066ABBF /* CropsViewController.swift in Sources */,
 				1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */,
@@ -672,14 +891,17 @@
 		};
 		17A62AED200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93FACEAD0B71AEDA793F7CC7 /* Pods-Gardenplanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3C9VJFZS7C;
 				INFOPLIST_FILE = Gardenplanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philipp.Gardenplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Gardenplanner/Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -687,14 +909,17 @@
 		};
 		17A62AEE200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D95A20ED34381891AB867D26 /* Pods-Gardenplanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3C9VJFZS7C;
 				INFOPLIST_FILE = Gardenplanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philipp.Gardenplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Gardenplanner/Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -702,6 +927,7 @@
 		};
 		17A62AF0200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F40613F20A1931047B29759B /* Pods-GardenplannerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -719,6 +945,7 @@
 		};
 		17A62AF1200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5F6E46DC73CA6B4FD894B1 /* Pods-GardenplannerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -736,6 +963,7 @@
 		};
 		17A62AF3200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32C8C4C83232254E0A2FE9DC /* Pods-GardenplannerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -752,6 +980,7 @@
 		};
 		17A62AF4200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B9ADE044A91922350D5C94A /* Pods-GardenplannerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

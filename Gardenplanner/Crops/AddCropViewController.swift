@@ -8,7 +8,11 @@
 
 import UIKit
 
-class AddCropViewController: UIViewController {
+class AddCropViewController: UIViewController, PostRequestCallback {
+    
+    
+
+    
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -17,8 +21,11 @@ class AddCropViewController: UIViewController {
     @IBOutlet weak var lastPouredTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var maturingTimeTextField: UITextField!
+    let datePickerSowDate = UIDatePicker()
+    let datePickerLastPoured = UIDatePicker()
     
     //var delegate : AddCropDelegate!
+    var callbackReceiver : PostRequestCallback!
     
     var isPutRequest = false
     var idForPutRequest = 0
@@ -31,6 +38,7 @@ class AddCropViewController: UIViewController {
     var waterInterval = ""
     var lastPoured = ""
     var maturingTime = ""
+    var loadingIndicator : LoadingIndicatorController!
     
     
     override func viewDidLoad() {
@@ -40,15 +48,39 @@ class AddCropViewController: UIViewController {
         sowDateTextfield.text = sowDate
         waterIntervalTextField.text = waterInterval
         lastPouredTextField.text = lastPoured
+        datePickerLastPoured.maximumDate = Date()
+        datePickerLastPoured.datePickerMode = UIDatePickerMode.dateAndTime
+        datePickerLastPoured.addTarget(self, action: #selector(overtakeLastPoured(_:)), for: UIControlEvents.valueChanged)
+        lastPouredTextField.returnKeyType = UIReturnKeyType.done
+        lastPouredTextField.inputView = datePickerLastPoured
         maturingTimeTextField.text = maturingTime
+        datePickerSowDate.maximumDate = Date()
+        datePickerSowDate.datePickerMode = UIDatePickerMode.date
+        datePickerSowDate.addTarget(self, action: #selector(overtakeSowDate(_:)), for: UIControlEvents.valueChanged)
+        sowDateTextfield.returnKeyType = UIReturnKeyType.done
+        sowDateTextfield.inputView = datePickerSowDate
+        
         
         messageLabel.textColor = UIColor.red
         messageLabel.text = ""
+        loadingIndicator = LoadingIndicatorController(view)
         
         data = BedsModel()
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func overtakeSowDate(_ sender: Any){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        sowDateTextfield.text = formatter.string(from: datePickerSowDate.date)
+    }
+    
+    @objc func overtakeLastPoured(_ sender: Any){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd hh:mm"
+        lastPouredTextField.text = formatter.string(from: datePickerLastPoured.date)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,21 +89,32 @@ class AddCropViewController: UIViewController {
     }
     
     @IBAction func saveAndPost(_ sender: Any) {
+        
         if nameTextField.text == "" || descriptionTextField.text == "" || sowDateTextfield.text == "" ||
             waterIntervalTextField.text == "" || lastPouredTextField.text == "" || maturingTimeTextField.text == ""{
             messageLabel.text = "Please fill everything and correct"
             return
         }
-        
+        loadingIndicator.startLoadingIndicator()
         var crop = CropsStruct(name: nameTextField.text!, description: descriptionTextField.text!, sowDate: sowDateTextfield.text!, waterInterval: waterIntervalTextField.text!, lastPoured: lastPouredTextField.text!, maturingTime: maturingTimeTextField.text!)
         crop.id = idForPutRequest
         crop.bedId = self.bedId
         let fetchData = FetchDataCrops()
+        fetchData.callbackReceiver = self
         
         if isPutRequest{
-            fetchData.putCrop(for: "maxi@sonntags.net", notify: "CropsLoaded", bedId: bedId, cropId: idForPutRequest, cropJsonString: crop.createJsonObject(crop: crop))
+            fetchData.putCrop(for: Constants.userEmail, notify: "CropsLoaded", bedId: bedId, cropId: idForPutRequest, cropJsonString: crop.createJsonObject(crop: crop))
         }else{
-            fetchData.postCrop(for: "maxi@sonntags.net", notify: "CropsLoaded", bedId: bedId, cropJsonString: crop.createJsonObject(crop: crop))
+            fetchData.postCrop(for: Constants.userEmail, notify: "CropsLoaded", bedId: bedId, cropJsonString: crop.createJsonObject(crop: crop))
+        }
+        
+        
+        
+    }
+    func notifyPostDone() {
+        DispatchQueue.main.async {
+            self.loadingIndicator.stopLoadingIndicator()
+            self.navigationController?.popViewController(animated: true)
         }
         
     }

@@ -55,7 +55,7 @@ class Network{
     func createRequestWithBody(urlString : String, jsonObject json: [String : Any]) -> URLRequest{
         var request = createUrlRequest(urlString: urlString)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Test123", forHTTPHeaderField: "token")
+        request.addValue(Constants.userToken, forHTTPHeaderField: "token")
         dump(request.httpBody)
         request.httpBody = try? JSONSerialization.data(withJSONObject: json, options: [])
         dump(request.httpBody)
@@ -65,7 +65,7 @@ class Network{
     func createRequestWithoutBody(urlString : String)-> URLRequest{
         var request = createUrlRequest(urlString: urlString)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Test123", forHTTPHeaderField: "token")
+        request.addValue(Constants.userToken, forHTTPHeaderField: "token")
         return request
     }
    
