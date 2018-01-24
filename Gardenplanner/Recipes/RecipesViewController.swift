@@ -76,6 +76,7 @@ class RecipesViewController: UIViewController {
         }
     }
     
+    
     @objc func searchBarNotification(){
         //error handling
         getRecipesForCrop(name: searchBar!.text!)

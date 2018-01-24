@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherGraphViewController: UIViewController {
 
-    @IBOutlet var lineGraph: LineGraph!
+    //@IBOutlet var lineGraph: LineGraph!
     var bed : BedsStruct!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +18,9 @@ class WeatherGraphViewController: UIViewController {
         if bed.location.weather.count > 0 {
             weather = bed.location.weather
         }
-        let dataSource = DataSource(weather:weather)
-        lineGraph.dataSource = dataSource
+        //let dataSource = DataSource(weather:weather)
+        //
+        //lineGraph.dataSource = dataSource
 
         // Do any additional setup after loading the view.
     }

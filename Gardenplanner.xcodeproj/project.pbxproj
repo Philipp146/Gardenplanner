@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163A6816381C3BA269972C61 /* Pods_GardenplannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817EE94EA6CC9D3E9A43BB98 /* Pods_GardenplannerTests.framework */; };
 		170F5AF220109EA000A74B81 /* IPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F5AF120109EA000A74B81 /* IPViewController.swift */; };
 		1710424720139C0F00526F9B /* AddCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710424620139C0F00526F9B /* AddCropViewController.swift */; };
 		171042492013A84B00526F9B /* CropsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171042482013A84B00526F9B /* CropsTableViewDelegate.swift */; };
-		1710424C2014E91900526F9B /* LoadingIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710424B2014E91900526F9B /* LoadingIndicatorController.swift */; };
 		1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0BE20079C640066ABBF /* BedsViewController.swift */; };
 		1728D0C120079C750066ABBF /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C020079C750066ABBF /* RecipesViewController.swift */; };
 		1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D0C220079C7E0066ABBF /* WeatherViewController.swift */; };
@@ -49,14 +49,17 @@
 		17C5E243200B85C900CAA441 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E242200B85C900CAA441 /* UrlBuilder.swift */; };
 		17C5E247200BA6A500CAA441 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E246200BA6A500CAA441 /* Constants.swift */; };
 		17C5E249200BC2C400CAA441 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5E248200BC2C400CAA441 /* UserModel.swift */; };
+		3685A7D8AA01EF6514DCAF19 /* Pods_Gardenplanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D263848820F6396A63A17DF /* Pods_Gardenplanner.framework */; };
+		D407EC332017E83C00764F19 /* LoadingIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407EC322017E83C00764F19 /* LoadingIndicatorController.swift */; };
+		D407EC352017E89600764F19 /* WeatherGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407EC342017E89600764F19 /* WeatherGraphViewController.swift */; };
 		D42404F82010BC7C00480804 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42404F72010BC7C00480804 /* LoginViewController.swift */; };
-		D42404FA2010D9D800480804 /* FetchOpenID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42404F92010D9D800480804 /* FetchOpenID.swift */; };
 		D4612FBC20155F3700D4AB6B /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4612FBB20155F3700D4AB6B /* IngredientsViewController.swift */; };
 		D4612FBE2015648200D4AB6B /* FetchIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4612FBD2015648100D4AB6B /* FetchIngredients.swift */; };
 		D4D17B572014D2C300AD2EA7 /* BedsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D17B562014D2C300AD2EA7 /* BedsTableViewDelegate.swift */; };
 		D4D17B592014D8B200AD2EA7 /* FetchDataRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D17B582014D8B200AD2EA7 /* FetchDataRecipe.swift */; };
 		D4D17B5B2014E76100AD2EA7 /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D17B5A2014E76100AD2EA7 /* SearchBarDelegate.swift */; };
 		D4D17B5D20150B3500AD2EA7 /* FetchPictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D17B5C20150B3500AD2EA7 /* FetchPictures.swift */; };
+		FA528563F9ED2EDDA9C6A28C /* Pods_GardenplannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDBB26C7961CDA597FC1080 /* Pods_GardenplannerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +80,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A200149ECC41EA27FB3EEE /* Pods-GardenplannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		108735D6DB3D44BBCC97FF6E /* Pods-GardenplannerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerUITests/Pods-GardenplannerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		170F5AF120109EA000A74B81 /* IPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPViewController.swift; sourceTree = "<group>"; };
 		1710424620139C0F00526F9B /* AddCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCropViewController.swift; sourceTree = "<group>"; };
 		171042482013A84B00526F9B /* CropsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsTableViewDelegate.swift; sourceTree = "<group>"; };
-		1710424B2014E91900526F9B /* LoadingIndicatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorController.swift; sourceTree = "<group>"; };
 		1728D0BE20079C640066ABBF /* BedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedsViewController.swift; sourceTree = "<group>"; };
 		1728D0C020079C750066ABBF /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		1728D0C220079C7E0066ABBF /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -125,8 +129,16 @@
 		17C5E242200B85C900CAA441 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 		17C5E246200BA6A500CAA441 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17C5E248200BC2C400CAA441 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1EF11F4F15980159F3E272FC /* Pods-Gardenplanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gardenplanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner.debug.xcconfig"; sourceTree = "<group>"; };
+		42EF2A06DDD5A74837DC0AE6 /* Pods-GardenplannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerTests/Pods-GardenplannerTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CDBB26C7961CDA597FC1080 /* Pods_GardenplannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardenplannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D263848820F6396A63A17DF /* Pods_Gardenplanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gardenplanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		817EE94EA6CC9D3E9A43BB98 /* Pods_GardenplannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardenplannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76F2E2D1DC213AD1D6E5719 /* Pods-Gardenplanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gardenplanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gardenplanner/Pods-Gardenplanner.release.xcconfig"; sourceTree = "<group>"; };
+		C1EC1A747A951340FF7951A4 /* Pods-GardenplannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenplannerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GardenplannerTests/Pods-GardenplannerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D407EC322017E83C00764F19 /* LoadingIndicatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingIndicatorController.swift; path = Gardenplanner/Download/LoadingIndicatorController.swift; sourceTree = SOURCE_ROOT; };
+		D407EC342017E89600764F19 /* WeatherGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherGraphViewController.swift; sourceTree = "<group>"; };
 		D42404F72010BC7C00480804 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D42404F92010D9D800480804 /* FetchOpenID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOpenID.swift; sourceTree = "<group>"; };
 		D4612FBB20155F3700D4AB6B /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		D4612FBD2015648100D4AB6B /* FetchIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchIngredients.swift; sourceTree = "<group>"; };
 		D4D17B562014D2C300AD2EA7 /* BedsTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BedsTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -140,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				369F7E1FDA6B789D4F9C2DB2 /* Pods_Gardenplanner.framework in Frameworks */,
+				3685A7D8AA01EF6514DCAF19 /* Pods_Gardenplanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB13C026BCDC8B878511F57 /* Pods_GardenplannerTests.framework in Frameworks */,
+				163A6816381C3BA269972C61 /* Pods_GardenplannerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C143AFBA3FF4AB90F22B271D /* Pods_GardenplannerUITests.framework in Frameworks */,
+				FA528563F9ED2EDDA9C6A28C /* Pods_GardenplannerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,10 +240,10 @@
 			children = (
 				1728D0DE2007A5060066ABBF /* Protocol */,
 				1728D0D92007A4150066ABBF /* Network.swift */,
+				D407EC322017E83C00764F19 /* LoadingIndicatorController.swift */,
 				1728D0DC2007A4CC0066ABBF /* FetchDataBeds.swift */,
 				17C5E240200A981C00CAA441 /* FetchDataCrops.swift */,
 				17C5E242200B85C900CAA441 /* UrlBuilder.swift */,
-				D42404F92010D9D800480804 /* FetchOpenID.swift */,
 				D4D17B582014D8B200AD2EA7 /* FetchDataRecipe.swift */,
 				D4D17B5C20150B3500AD2EA7 /* FetchPictures.swift */,
 				D4612FBD2015648100D4AB6B /* FetchIngredients.swift */,
@@ -279,7 +291,6 @@
 		17A62ABB200774B00059977D = {
 			isa = PBXGroup;
 			children = (
-				402094B4201543E800D32410 /* GoogleService-Info.plist */,
 				17A62AC6200774B10059977D /* Gardenplanner */,
 				17A62ADB200774B10059977D /* GardenplannerTests */,
 				17A62AE6200774B10059977D /* GardenplannerUITests */,
@@ -344,8 +355,6 @@
 		402094B72015574600D32410 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				402094B82015576D00D32410 /* LineGraph.swift */,
-				402094BA2015578700D32410 /* LineGraphDataSource.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,7 +362,7 @@
 		402094BF2015594A00D32410 /* WeatherGraph */ = {
 			isa = PBXGroup;
 			children = (
-				402094C02015595800D32410 /* WeatherGraphViewController.swift */,
+				D407EC342017E89600764F19 /* WeatherGraphViewController.swift */,
 			);
 			path = WeatherGraph;
 			sourceTree = "<group>";
@@ -361,9 +370,9 @@
 		6D6D09681E5959F4BC915CFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E485DF85E2AF3CA56F42084D /* Pods_Gardenplanner.framework */,
-				6CD5DA6C83172A8DBB28F7F2 /* Pods_GardenplannerTests.framework */,
-				668CC2EBFF113F68DEDDF318 /* Pods_GardenplannerUITests.framework */,
+				7D263848820F6396A63A17DF /* Pods_Gardenplanner.framework */,
+				817EE94EA6CC9D3E9A43BB98 /* Pods_GardenplannerTests.framework */,
+				4CDBB26C7961CDA597FC1080 /* Pods_GardenplannerUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -371,12 +380,12 @@
 		76C58291A4AAC1CD151ADD1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				93FACEAD0B71AEDA793F7CC7 /* Pods-Gardenplanner.debug.xcconfig */,
-				D95A20ED34381891AB867D26 /* Pods-Gardenplanner.release.xcconfig */,
-				F40613F20A1931047B29759B /* Pods-GardenplannerTests.debug.xcconfig */,
-				9A5F6E46DC73CA6B4FD894B1 /* Pods-GardenplannerTests.release.xcconfig */,
-				32C8C4C83232254E0A2FE9DC /* Pods-GardenplannerUITests.debug.xcconfig */,
-				1B9ADE044A91922350D5C94A /* Pods-GardenplannerUITests.release.xcconfig */,
+				1EF11F4F15980159F3E272FC /* Pods-Gardenplanner.debug.xcconfig */,
+				A76F2E2D1DC213AD1D6E5719 /* Pods-Gardenplanner.release.xcconfig */,
+				C1EC1A747A951340FF7951A4 /* Pods-GardenplannerTests.debug.xcconfig */,
+				42EF2A06DDD5A74837DC0AE6 /* Pods-GardenplannerTests.release.xcconfig */,
+				02A200149ECC41EA27FB3EEE /* Pods-GardenplannerUITests.debug.xcconfig */,
+				108735D6DB3D44BBCC97FF6E /* Pods-GardenplannerUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -499,7 +508,6 @@
 			files = (
 				17A62AD2200774B10059977D /* LaunchScreen.storyboard in Resources */,
 				17A62AF6200781A90059977D /* Assets.xcassets in Resources */,
-				402094B5201543E900D32410 /* GoogleService-Info.plist in Resources */,
 				17A62ACD200774B10059977D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,15 +691,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1728D0E02007A5140066ABBF /* NetworkSupervisor.swift in Sources */,
+				D407EC352017E89600764F19 /* WeatherGraphViewController.swift in Sources */,
 				1728D0FB2008CE3D0066ABBF /* ModelSingleton.swift in Sources */,
 				1728D0E92007B08C0066ABBF /* RecipesModel.swift in Sources */,
 				1728D0C120079C750066ABBF /* RecipesViewController.swift in Sources */,
 				1728D0C320079C7E0066ABBF /* WeatherViewController.swift in Sources */,
-				D42404FA2010D9D800480804 /* FetchOpenID.swift in Sources */,
 				1728D0F92008CB4B0066ABBF /* LocationsModel.swift in Sources */,
 				17C5E23D200A871F00CAA441 /* CropViewController.swift in Sources */,
-				402094B92015576D00D32410 /* LineGraph.swift in Sources */,
 				17C5E247200BA6A500CAA441 /* Constants.swift in Sources */,
+				D407EC332017E83C00764F19 /* LoadingIndicatorController.swift in Sources */,
 				1728D0DA2007A4150066ABBF /* Network.swift in Sources */,
 				1728D0D32007A1660066ABBF /* BedsTableViewCell.swift in Sources */,
 				17C5E249200BC2C400CAA441 /* UserModel.swift in Sources */,
@@ -719,7 +727,6 @@
 				1728D0EC2007B1B90066ABBF /* BedsStruct.swift in Sources */,
 				D42404F82010BC7C00480804 /* LoginViewController.swift in Sources */,
 				17C5E241200A981C00CAA441 /* FetchDataCrops.swift in Sources */,
-				402094BB2015578700D32410 /* LineGraphDataSource.swift in Sources */,
 				1728D0CD2007A0A40066ABBF /* BedsTableViewDataSource.swift in Sources */,
 				1728D0C520079C8B0066ABBF /* CropsViewController.swift in Sources */,
 				1728D0BF20079C640066ABBF /* BedsViewController.swift in Sources */,
@@ -891,15 +898,15 @@
 		};
 		17A62AED200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93FACEAD0B71AEDA793F7CC7 /* Pods-Gardenplanner.debug.xcconfig */;
+			baseConfigurationReference = 1EF11F4F15980159F3E272FC /* Pods-Gardenplanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3C9VJFZS7C;
+				DEVELOPMENT_TEAM = 7B2X7R4QYZ;
 				INFOPLIST_FILE = Gardenplanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = philipp.Gardenplanner;
+				PRODUCT_BUNDLE_IDENTIFIER = normen.Gardenplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Gardenplanner/Header.h;
 				SWIFT_VERSION = 4.0;
@@ -909,15 +916,15 @@
 		};
 		17A62AEE200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D95A20ED34381891AB867D26 /* Pods-Gardenplanner.release.xcconfig */;
+			baseConfigurationReference = A76F2E2D1DC213AD1D6E5719 /* Pods-Gardenplanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3C9VJFZS7C;
+				DEVELOPMENT_TEAM = 7B2X7R4QYZ;
 				INFOPLIST_FILE = Gardenplanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = philipp.Gardenplanner;
+				PRODUCT_BUNDLE_IDENTIFIER = normen.Gardenplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Gardenplanner/Header.h;
 				SWIFT_VERSION = 4.0;
@@ -927,7 +934,7 @@
 		};
 		17A62AF0200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F40613F20A1931047B29759B /* Pods-GardenplannerTests.debug.xcconfig */;
+			baseConfigurationReference = C1EC1A747A951340FF7951A4 /* Pods-GardenplannerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -945,7 +952,7 @@
 		};
 		17A62AF1200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A5F6E46DC73CA6B4FD894B1 /* Pods-GardenplannerTests.release.xcconfig */;
+			baseConfigurationReference = 42EF2A06DDD5A74837DC0AE6 /* Pods-GardenplannerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -963,7 +970,7 @@
 		};
 		17A62AF3200774B10059977D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32C8C4C83232254E0A2FE9DC /* Pods-GardenplannerUITests.debug.xcconfig */;
+			baseConfigurationReference = 02A200149ECC41EA27FB3EEE /* Pods-GardenplannerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -980,7 +987,7 @@
 		};
 		17A62AF4200774B10059977D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B9ADE044A91922350D5C94A /* Pods-GardenplannerUITests.release.xcconfig */;
+			baseConfigurationReference = 108735D6DB3D44BBCC97FF6E /* Pods-GardenplannerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -34,14 +34,15 @@ class CropViewController: UIViewController {
         lastPoured.text = crop.lastPoured
         maturingTime.text = crop.maturingTime
     }
-
+    @IBAction func SwitchToRecipe(_ sender: UIButton) {
+        performSegue(withIdentifier: "Segue2Recipes", sender: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func switchToRecipe(_ sender: UIButton) {
-        performSegue(withIdentifier: "Segue2Recipes", sender: nil)
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Segue2Recipes"{
             let recipeVC = segue.destination as! RecipesViewController
