@@ -13,7 +13,6 @@ class IPViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var ipTextField: UITextField!
     @IBOutlet weak var ipLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
-    
     fileprivate var constants : Constants!
     
     override func viewDidLoad() {

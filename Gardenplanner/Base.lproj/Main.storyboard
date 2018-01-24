@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p5L-CS-8da">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jO3-aC-5Dh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -799,45 +799,13 @@
                     <connections>
                         <outlet property="ipLabel" destination="WsR-6C-UMF" id="DHk-8l-Hsy"/>
                         <outlet property="ipTextField" destination="Aft-Mn-1jH" id="VgG-Z3-und"/>
-                        <segue destination="G27-qU-Gmf" kind="show" identifier="SegueLogin" id="JpQ-HF-2DE"/>
+                        <outlet property="saveButton" destination="ula-S7-sDe" id="wt8-GA-Ina"/>
+                        <segue destination="p5L-CS-8da" kind="show" identifier="SegueLogin" id="LeT-Q2-Rz6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxV-FM-NLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2890.4000000000001" y="-253.2233883058471"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="6Ng-Wf-cLf">
-            <objects>
-                <viewController id="G27-qU-Gmf" customClass="LoginViewController" customModule="Gardenplanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vd6-x6-EUl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9l-kW-nZx">
-                                <rect key="frame" x="144" y="600" width="46" height="30"/>
-                                <state key="normal" title="Show"/>
-                                <connections>
-                                    <action selector="login:" destination="G27-qU-Gmf" eventType="touchUpInside" id="n0C-dJ-H84"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.98010633650000001" blue="0.20540225810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="I9l-kW-nZx" firstAttribute="top" secondItem="HsZ-Ya-Ojc" secondAttribute="top" constant="580" id="7pR-Zk-DrT"/>
-                            <constraint firstItem="I9l-kW-nZx" firstAttribute="leading" secondItem="HsZ-Ya-Ojc" secondAttribute="leading" constant="144" id="Ake-1x-Kde"/>
-                            <constraint firstItem="HsZ-Ya-Ojc" firstAttribute="trailing" secondItem="I9l-kW-nZx" secondAttribute="trailing" constant="185" id="BoA-Mx-GcS"/>
-                            <constraint firstItem="HsZ-Ya-Ojc" firstAttribute="bottom" secondItem="I9l-kW-nZx" secondAttribute="bottom" constant="37" id="aQM-IZ-odE"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="HsZ-Ya-Ojc"/>
-                    </view>
-                    <connections>
-                        <segue destination="p5L-CS-8da" kind="show" identifier="SegueTab" id="84J-VG-L4E"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dwf-Id-h1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1853.5999999999999" y="-247.82608695652175"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="Rsa-a0-ex1">
