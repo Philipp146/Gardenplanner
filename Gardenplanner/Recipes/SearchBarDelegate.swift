@@ -11,6 +11,8 @@ import UIKit
 
 class SearchBarDelegate: NSObject, UISearchBarDelegate{
     
+    
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let nc = NotificationCenter.default
         nc.post(name: NSNotification.Name("searchBar"), object: nil)

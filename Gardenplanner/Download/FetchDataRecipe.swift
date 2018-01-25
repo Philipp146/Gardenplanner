@@ -33,8 +33,7 @@ class FetchDataRecipe: NSObject, NetworkSupervisor{
                 print("Data was incorrect")
                 return
         }
-        recipes.clear()
-        
+        recipes.clearSelf()
         let jsonList = json!["recipeList"] as! [[String: Any]]
         for i in jsonList{
             recipes.add(recipe: RecipesStruct(withJsonForName: i)!)

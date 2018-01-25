@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecipesViewController: UIViewController {
+class RecipesViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -19,11 +19,13 @@ class RecipesViewController: UIViewController {
     var notifyString = "recipesList"
     var delegate = SearchBarDelegate()
     var fetchPic = FetchPictures()
+    var data: RecipesModel!
 
     
     var dataSource : RecipeTableViewDataSource!
     
     override func viewDidLoad() {
+        data = RecipesModel()
         super.viewDidLoad()
         searchBar.delegate = delegate
         dataSource = RecipeTableViewDataSource()
@@ -80,6 +82,15 @@ class RecipesViewController: UIViewController {
     @objc func searchBarNotification(){
         //error handling
         getRecipesForCrop(name: searchBar!.text!)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail"{
+            let ingVC = segue.destination as! IngredientsViewController
+            let row = tableView.indexPathForSelectedRow!.row
+            ingVC.recipe = ModelSingleton.sharedInstance.recipes[row]
+            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: false)
+        }
     }
     
     

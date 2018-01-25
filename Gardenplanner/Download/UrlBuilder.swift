@@ -24,7 +24,11 @@ class UrlBuilder: NSObject {
     func addQuery(key : String, value: String, url : String ) -> String{
         let newUrl = url + "?q=" + value
         return newUrl
-    } 
+    }
+    func addQueryId(key : String, value: String, url : String ) -> String{
+        let newUrl = url + "?id=" + value
+        return newUrl
+    }
     
 //    func createBaseUrl() -> URLComponents
 //    {

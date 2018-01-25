@@ -33,6 +33,9 @@ class RecipesModel: NSObject {
     }
     
     func clear(){
+      //  model.recipes = []
+    }
+    func clearSelf(){
         model.recipes = []
     }
 
